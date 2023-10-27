@@ -1,0 +1,1 @@
+description = scr_CoolTextTween(description_temp)

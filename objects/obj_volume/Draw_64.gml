@@ -1,0 +1,1 @@
+draw_sprite_ext(volumeSpr, 0, 50, 90, -1, 1 + volumeObj, 0, c_white, alpha)

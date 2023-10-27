@@ -1,0 +1,310 @@
+Converting GML script: ${project_dir}\scripts\scr_songint\scr_songint.gml
+Converted description /// @description setting stage
+Converted string - line 371: "songs\" -> "songs\\"
+
+Converting GML script: ${project_dir}\scripts\scr_keytoname\scr_keytoname.gml
+Converted description /// @description  key_to_string( key )/// @param  key
+Converted string - line 67: "\" -> "\\"
+
+Font fnt_comic1 has been converted to font family Comic Sans MS (Regular)
+GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\fnt_comic1\fnt_comic1.gms1.png
+Font fnt_comic1b has been converted to font family Comic Sans MS (Bold)
+GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\fnt_comic1b\fnt_comic1b.gms1.png
+Font fnt_comic2 has been converted to font family Comic Sans MS (Regular)
+GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\fnt_comic2\fnt_comic2.gms1.png
+!!! Font fnt_tutorial uses a font (8BIT WONDER) not installed on this system - Font has NOT been regenerated
+GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\fnt_tutorial\fnt_tutorial.gms1.png
+!!! Font fnt_infographic uses a font (8-bit Arcade In) not installed on this system - Font has NOT been regenerated
+GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\fnt_infographic\fnt_infographic.gms1.png
+!!! Font fnt uses a font (GRAND FINALE) not installed on this system - Font has NOT been regenerated
+GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\fnt\fnt.gms1.png
+Converting GML script: ${project_dir}\objects\obj_midi_clock\Draw_0.gml
+Converted description /// @description Show Clock
+
+Converting GML script: ${project_dir}\objects\obj_stats\Other_4.gml
+Converted description /// @description fade in and save
+
+Converting GML script: ${project_dir}\objects\obj_stats\Other_3.gml
+Converted description /// @description save game
+
+Converting GML script: ${project_dir}\objects\obj_song\Create_0.gml
+Converted description /// @description ui colors
+
+Converting GML script: ${project_dir}\objects\obj_song\Step_2.gml
+Converted description /// @description clamps
+
+Converting GML script: ${project_dir}\objects\obj_song\Draw_75.gml
+Converted builtin - line 93: view_wport[0] -> __view_get( e__VW.WPort, 0 )
+Converted builtin - line 93: view_hport[0] -> __view_get( e__VW.HPort, 0 )
+Converted description /// @description health bar && pause menu
+
+Converting GML script: ${project_dir}\objects\obj_song\Draw_74.gml
+Converted description /// @description ntsc gui
+
+Converting GML script: ${project_dir}\objects\obj_song\Draw_64.gml
+Converted description /// @description count down
+
+Converting GML script: ${project_dir}\objects\obj_song\Draw_0.gml
+Converted description /// @description stagehand
+
+Converting GML script: ${project_dir}\objects\obj_freeplay\Step_0.gml
+Converted description /// @description controlls
+
+Converting GML script: ${project_dir}\objects\obj_discord\Draw_64.gml
+Converted builtin - line 8: view_wport[0] -> __view_get( e__VW.WPort, 0 )
+Converted builtin - line 8: view_hport[0] -> __view_get( e__VW.HPort, 0 )
+
+Converting GML script: ${project_dir}\objects\obj_titlegf\Step_0.gml
+Converted description /// @description bopping
+
+Converting GML script: ${project_dir}\objects\obj_titlegf\Other_62.gml
+Converted description /// @description update checker
+
+Converting GML script: ${project_dir}\objects\obj_titlegf\Draw_64.gml
+Converted description /// @description HEY THIS IS OLD!
+
+Converting GML script: ${project_dir}\objects\obj_charting\Step_0.gml
+Converted description /// @description controlls + stuff
+
+Converting GML script: ${project_dir}\objects\obj_charting\Draw_73.gml
+Converted description /// @description line + minimap
+
+Converting GML script: ${project_dir}\objects\obj_charting\Draw_72.gml
+Converted description /// @description images
+
+Converting GML script: ${project_dir}\objects\obj_charting\Draw_0.gml
+Converted description /// @description text
+
+Converting GML script: ${project_dir}\objects\obj_note\Step_1.gml
+Converted description /// @description double note fix FIX THE CRAP
+
+Converting GML script: ${project_dir}\objects\obj_note\Draw_75.gml
+Converted description /// @description drawing notes
+
+Converting GML script: ${project_dir}\objects\obj_note\Draw_64.gml
+Converted description /// @description hold note caps
+
+Converting GML script: ${project_dir}\objects\obj_camera\Step_0.gml
+Converted builtin - line 2: view_xview[0]=x-view_wview/2 -> __view_set( e__VW.XView, 0, x-view_wview/2 )
+Converted builtin - line 3: view_yview[0]=y-view_hview/2 -> __view_set( e__VW.YView, 0, y-view_hview/2 )
+Converted builtin - line 4: view_wview[0]=image_xscale -> __view_set( e__VW.WView, 0, image_xscale )
+Converted builtin - line 5: view_hview[0]=image_xscale -> __view_set( e__VW.HView, 0, image_xscale )
+Converted builtin - line 6: view_angle[0]=image_angle -> __view_set( e__VW.Angle, 0, image_angle )
+Converted builtin - line 2: view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 3: view_hview -> __view_get( e__VW.HView, 0 )
+
+Converting GML script: ${project_dir}\objects\obj_player\Step_0.gml
+Converted description /// @description key press old
+
+Converting GML script: ${project_dir}\objects\obj_player\Draw_0.gml
+Converted description /// @description skins
+
+Converting GML script: ${project_dir}\objects\obj_gameover\Alarm_1.gml
+Converted description /// @description jokes over
+
+Converting GML script: ${project_dir}\objects\obj_gameover\Alarm_0.gml
+Converted description /// @description go back to stage
+
+Converting GML script: ${project_dir}\objects\obj_gameover\Draw_73.gml
+Converted description /// @description funny reveal
+
+Converting GML script: ${project_dir}\objects\obj_gameover\Draw_0.gml
+Converted description /// @description dude and text
+
+Converting GML script: ${project_dir}\objects\obj_lady\Step_0.gml
+Converted description /// @description old code
+
+Converting GML script: ${project_dir}\objects\obj_lady\Draw_0.gml
+Converted description /// @description new code
+
+Converting GML script: ${project_dir}\objects\obj_badguy\Step_0.gml
+Converted description /// @description hit note new
+
+Converting GML script: ${project_dir}\objects\obj_playermimic\Create_0.gml
+Converted description /// @description boob
+
+Converting GML script: ${project_dir}\objects\obj_nermal\Create_0.gml
+Converted description /// @description /peeeb
+
+Converting GML script: ${project_dir}\objects\obj_tutdialog4\Alarm_0.gml
+Converted description /// @description end static
+
+Converting GML script: ${project_dir}\objects\obj_ggdialog1\Create_0.gml
+Converted string - line 56: "\/" -> "\\/"
+
+Converting GML script: ${project_dir}\objects\obj_w3s1dialog2\Draw_64.gml
+Converted description /// @description dont draw textbox
+
+Converting GML script: ${project_dir}\objects\obj_w3s1dialog4\Alarm_3.gml
+Converted description /// @description door slam 3
+
+Converting GML script: ${project_dir}\objects\obj_w3s1dialog4\Alarm_2.gml
+Converted description /// @description door open 2
+
+Converting GML script: ${project_dir}\objects\obj_w3s1dialog4\Alarm_1.gml
+Converted description /// @description door slam 2
+
+Converting GML script: ${project_dir}\objects\obj_w3s1dialog4\Alarm_0.gml
+Converted description /// @description door open 1
+
+Converting GML script: ${project_dir}\objects\obj_w3s1dialog4\Step_0.gml
+Converted description /// @description set cutscene sprites
+
+Converting GML script: ${project_dir}\objects\obj_w3s1dialog4\Draw_64.gml
+Converted description /// @description hide ui
+
+Converting GML script: ${project_dir}\objects\obj_w3s1dialog4\Draw_0.gml
+Converted description /// @description O .
+
+Converting GML script: ${project_dir}\objects\obj_w3s2dialog1\Alarm_6.gml
+Converted description /// @description resume
+
+Converting GML script: ${project_dir}\objects\obj_w3s2dialog1\Step_0.gml
+Converted description /// @description set cutscene sprites
+
+Converting GML script: ${project_dir}\objects\obj_cutscene\Alarm_0.gml
+Converted description /// @description cutscene timing
+
+Converting GML script: ${project_dir}\objects\obj_textbox\Create_0.gml
+Converted description /// @description text vars
+
+Converting GML script: ${project_dir}\objects\obj_textbox\Step_0.gml
+Converted description /// @description text scrolling
+
+Converting GML script: ${project_dir}\objects\obj_fadeout\Draw_64.gml
+Converted builtin - line 1: view_wport[0] -> __view_get( e__VW.WPort, 0 )
+Converted builtin - line 1: view_hport[0] -> __view_get( e__VW.HPort, 0 )
+
+Converting GML script: ${project_dir}\objects\obj_fadein\Draw_64.gml
+Converted builtin - line 1: view_wport[0] -> __view_get( e__VW.WPort, 0 )
+Converted builtin - line 1: view_hport[0] -> __view_get( e__VW.HPort, 0 )
+
+Converting GML script: ${project_dir}\objects\obj_fireworkcreator\Draw_72.gml
+Converted description /// @description crazy background
+
+Converting GML script: ${project_dir}\objects\obj_soundtest\Draw_0.gml
+Converted description /// @description background
+
+Missing audiogroup for sound: 'snd_josh' - setting to default audio group
+Missing audiogroup for sound: 'snd_whehehe' - setting to default audio group
+Missing audiogroup for sound: 'mus_tutorial' - setting to default audio group
+Missing audiogroup for sound: 'mus_w1s1' - setting to default audio group
+Missing audiogroup for sound: 'mus_w1s2' - setting to default audio group
+Missing audiogroup for sound: 'mus_w2s1' - setting to default audio group
+Missing audiogroup for sound: 'mus_w2s2' - setting to default audio group
+Missing audiogroup for sound: 'mus_w3s1' - setting to default audio group
+Missing audiogroup for sound: 'mus_w3s2' - setting to default audio group
+Missing audiogroup for sound: 'mus_frostbytep1' - setting to default audio group
+Missing audiogroup for sound: 'mus_frostbytep2' - setting to default audio group
+Missing audiogroup for sound: 'mus_rainbowtylenol' - setting to default audio group
+Missing audiogroup for sound: 'mus_channelsurf' - setting to default audio group
+Missing audiogroup for sound: 'mus_breakitdown' - setting to default audio group
+Missing audiogroup for sound: 'mus_menu' - setting to default audio group
+Missing audiogroup for sound: 'mus_gameover' - setting to default audio group
+Missing audiogroup for sound: 'mus_birthdayboy' - setting to default audio group
+Missing audiogroup for sound: 'mus_ohcrap' - setting to default audio group
+Missing audiogroup for sound: 'mus_crazyjohnny' - setting to default audio group
+Missing audiogroup for sound: 'mus_bozo' - setting to default audio group
+Missing audiogroup for sound: 'mus_pictocyan' - setting to default audio group
+Missing audiogroup for sound: 'mus_eyestrain' - setting to default audio group
+Missing audiogroup for sound: 'mus_player2' - setting to default audio group
+Missing audiogroup for sound: 'mus_unknownvariable' - setting to default audio group
+Missing audiogroup for sound: 'mus_arkaid' - setting to default audio group
+Missing audiogroup for sound: 'mus_mysweetheart' - setting to default audio group
+Missing audiogroup for sound: 'mus_bbbb' - setting to default audio group
+Missing audiogroup for sound: 'mus_howdoileavetheoptionsmenu' - setting to default audio group
+Missing audiogroup for sound: 'mus_howdoileavetheoptionsmenu_alt' - setting to default audio group
+Missing audiogroup for sound: 'mus_w1s2_slow_reverb' - setting to default audio group
+Missing audiogroup for sound: 'mus_twibilledcamera' - setting to default audio group
+Missing audiogroup for sound: 'mus_gimmeabreak' - setting to default audio group
+Missing audiogroup for sound: 'mus_kindaAbadass' - setting to default audio group
+Missing audiogroup for sound: 'mus_cats' - setting to default audio group
+Missing audiogroup for sound: 'mus_specialguest' - setting to default audio group
+Missing audiogroup for sound: 'mus_buddy' - setting to default audio group
+Missing audiogroup for sound: 'snd_3' - setting to default audio group
+Missing audiogroup for sound: 'snd_2' - setting to default audio group
+Missing audiogroup for sound: 'snd_1' - setting to default audio group
+Missing audiogroup for sound: 'snd_go' - setting to default audio group
+Missing audiogroup for sound: 'snd_oh' - setting to default audio group
+Missing audiogroup for sound: 'snd_ha' - setting to default audio group
+Missing audiogroup for sound: 'snd_yousuck' - setting to default audio group
+Missing audiogroup for sound: 'snd_errortalk' - setting to default audio group
+Missing audiogroup for sound: 'snd_dudetalk' - setting to default audio group
+Missing audiogroup for sound: 'snd_stradtalk' - setting to default audio group
+Missing audiogroup for sound: 'snd_ladytalk' - setting to default audio group
+Missing audiogroup for sound: 'snd_tvtalk' - setting to default audio group
+Missing audiogroup for sound: 'snd_cyantalk' - setting to default audio group
+Missing audiogroup for sound: 'snd_cdboytalk' - setting to default audio group
+Missing audiogroup for sound: 'snd_cdboy_c' - setting to default audio group
+Missing audiogroup for sound: 'snd_cdboy_t' - setting to default audio group
+Missing audiogroup for sound: 'snd_cdboy_e' - setting to default audio group
+Missing audiogroup for sound: 'snd_buddytalk' - setting to default audio group
+Missing audiogroup for sound: 'snd_vinyltalk' - setting to default audio group
+Missing audiogroup for sound: 'snd_gunktalk' - setting to default audio group
+Missing audiogroup for sound: 'snd_dudeayy' - setting to default audio group
+Missing audiogroup for sound: 'snd_crap' - setting to default audio group
+Missing audiogroup for sound: 'snd_ladyyay' - setting to default audio group
+Missing audiogroup for sound: 'snd_cyanayy' - setting to default audio group
+Missing audiogroup for sound: 'snd_buddyayy' - setting to default audio group
+Missing audiogroup for sound: 'snd_cdboynice' - setting to default audio group
+Missing audiogroup for sound: 'snd_cdboygood' - setting to default audio group
+Missing audiogroup for sound: 'snd_cdboyvgood' - setting to default audio group
+Missing audiogroup for sound: 'snd_cdboybravo' - setting to default audio group
+Missing audiogroup for sound: 'snd_gunkayy' - setting to default audio group
+Missing audiogroup for sound: 'snd_unlockall' - setting to default audio group
+Missing audiogroup for sound: 'snd_unlockinfo' - setting to default audio group
+Missing audiogroup for sound: 'snd_unlockchannel' - setting to default audio group
+Missing audiogroup for sound: 'snd_unlocktriangle' - setting to default audio group
+Missing audiogroup for sound: 'snd_ribbit1' - setting to default audio group
+Missing audiogroup for sound: 'snd_ribbit2' - setting to default audio group
+Missing audiogroup for sound: 'snd_bomb1' - setting to default audio group
+Missing audiogroup for sound: 'snd_bomb2' - setting to default audio group
+Missing audiogroup for sound: 'snd_bomb3' - setting to default audio group
+Missing audiogroup for sound: 'snd_cdow' - setting to default audio group
+Missing audiogroup for sound: 'snd_cdowch' - setting to default audio group
+Missing audiogroup for sound: 'snd_cdpain' - setting to default audio group
+Missing audiogroup for sound: 'snd_cdbad' - setting to default audio group
+Missing audiogroup for sound: 'snd_win' - setting to default audio group
+Missing audiogroup for sound: 'snd_own' - setting to default audio group
+Missing audiogroup for sound: 'snd_gasp' - setting to default audio group
+Missing audiogroup for sound: 'snd_recordscratch' - setting to default audio group
+Missing audiogroup for sound: 'snd_golden_freddy' - setting to default audio group
+Missing audiogroup for sound: 'snd_yoloalarm' - setting to default audio group
+Missing audiogroup for sound: 'snd_yoloalarm1' - setting to default audio group
+Missing audiogroup for sound: 'snd_yoloalarm2' - setting to default audio group
+Missing audiogroup for sound: 'snd_yoloalarm3' - setting to default audio group
+Missing audiogroup for sound: 'snd_failure2' - setting to default audio group
+Missing audiogroup for sound: 'snd_doorslam' - setting to default audio group
+Missing audiogroup for sound: 'snd_OHSHIT' - setting to default audio group
+Missing audiogroup for sound: 'snd_doorknock' - setting to default audio group
+Missing audiogroup for sound: 'snd_digdeeper' - setting to default audio group
+Missing audiogroup for sound: 'snd_static' - setting to default audio group
+Missing audiogroup for sound: 'snd_owch' - setting to default audio group
+Missing audiogroup for sound: 'snd_spookystrad' - setting to default audio group
+Missing audiogroup for sound: 'snd_explode' - setting to default audio group
+Missing audiogroup for sound: 'snd_weirdnoise' - setting to default audio group
+Missing audiogroup for sound: 'snd_WHAM' - setting to default audio group
+Missing audiogroup for sound: 'snd_missing' - setting to default audio group
+Missing audiogroup for sound: 'snd_bonebreak' - setting to default audio group
+Missing audiogroup for sound: 'snd_buddyyelp' - setting to default audio group
+Missing audiogroup for sound: 'snd_doorslam2' - setting to default audio group
+Missing audiogroup for sound: 'snd_dooropen' - setting to default audio group
+Missing audiogroup for sound: 'snd_cdboydeath' - setting to default audio group
+Missing audiogroup for sound: 'snd_blink' - setting to default audio group
+Missing audiogroup for sound: 'snd_dwuh' - setting to default audio group
+Missing audiogroup for sound: 'snd_hoodie' - setting to default audio group
+Game speed set to 60
+Added compatibility script 'action/action_current_room.gml'
+Added compatibility script 'action/action_if_variable.gml'
+Added compatibility script 'action/action_inherited.gml'
+Added compatibility script 'action/action_message.gml'
+Added compatibility script 'draw/draw_set_blend_mode.gml'
+Added compatibility script 'instance/instance_create.gml'
+Added compatibility script 'object/object_get_depth.gml'
+Added compatibility script 'view/__view_get.gml'
+Added compatibility script 'view/__view_set.gml'
+Added compatibility script 'view/__view_set_internal.gml'
+Added compatibility script 'action/__init_action.gml'
+Added compatibility script 'view/__init_view.gml'
+Added compatibility script '__init_global.gml'
+Added compatibility script '__global_object_depths.gml'

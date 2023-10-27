@@ -68,7 +68,7 @@ if (bpmWrite)
 		bpmWriter=string_copy(bpmWriter, 1, string_length(bpmWriter)-1)		
 }
 
-
+//Goofy
 if(hitsoundCheck) && (songpos>-1) && !audio_is_paused(songplaying) 
 {
 	var coolThing = round(songpos/60*bpm*4);

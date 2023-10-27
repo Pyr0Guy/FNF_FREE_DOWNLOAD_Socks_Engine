@@ -99,8 +99,8 @@ for (o = 0; o <= 5; o++)
 
 if (submenop[1] == 1)
 {
-    draw_sprite_ext(spr_whitepixel, 0, 166, 28, 84, ((((ntypes div 4) * 16) + 20) + 4), 0, c_black, 1)
-    draw_sprite_ext(spr_whitepixel, 0, 168, 30, 80, (((ntypes div 4) * 16) + 20), 0, color1, 1)
+    draw_sprite_ext(spr_whitepixel, 0, 166, 28  + yy, 84, ((((ntypes div 4) * 16) + 20) + 4), 0, c_black, 1)
+    draw_sprite_ext(spr_whitepixel, 0, 168, 30 + yy, 80, (((ntypes div 4) * 16) + 20), 0, color1, 1)
     for (xx = 1; xx <= ntypes; xx++)
     {
         fugly = 150
@@ -117,13 +117,13 @@ if (submenop[1] == 1)
         }
         if (xx == 8)
             soff = 2
-        if (mouse_x > (fugly + ((xx - bomf) * 20)) && mouse_x < ((fugly + ((xx - bomf) * 20)) + 16) && mouse_y > (24 + (chungy * 20)) && mouse_y < ((24 + (chungy * 20)) + 16))
+        if (mouse_x > (fugly + ((xx - bomf) * 20)) && mouse_x < ((fugly + ((xx - bomf) * 20)) + 16) && mouse_y > (24 + (chungy * 20)  + yy) && mouse_y < ((24 + (chungy * 20)) + 16) + yy)
         {
-            draw_sprite_ext(spr_whitepixel, 0, ((fugly + ((xx - bomf) * 20)) - 1), ((24 + (chungy * 20)) - 1), 18, 18, 0, c_white, 0.5)
+            draw_sprite_ext(spr_whitepixel, 0, ((fugly + ((xx - bomf) * 20)) - 1), ((24 + (chungy * 20)) - 1) + yy, 18, 18, 0, c_white, 0.5)
             if mouse_check_button_pressed(mb_left)
-                obj_notespace.type = (xx + soff)
+                typ = (xx + soff)
         }
-        draw_sprite(spr_dud, (xx + soff), (fugly + ((xx - bomf) * 20)), (24 + (chungy * 20)))
+        draw_sprite(spr_dud, (xx + soff), (fugly + ((xx - bomf) * 20)), (24 + (chungy * 20)) + yy)
     }
 }
 

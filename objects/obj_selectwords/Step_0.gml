@@ -1,20 +1,20 @@
 if (selection) && (obj_stats.save)
 {
-	if(keyboard_check_pressed(vk_down) or gamepad_button_check_pressed(0,gp_padd))
-		sel++
+	if(scr_multiCheckButtonPressed(vk_down, gp_padd))
+		obj_stats.selectedWord++
 
-	if(keyboard_check_pressed(vk_up) or gamepad_button_check_pressed(0,gp_padu))
-		sel--
+	if(scr_multiCheckButtonPressed(vk_up, gp_padu))
+		obj_stats.selectedWord--
 }
 	
-if(sel > len-1)
-	sel = 0
-if(sel <= -1)
-	sel = len-1
+if(obj_stats.selectedWord > len-1)
+	obj_stats.selectedWord = 0
+if(obj_stats.selectedWord <= -1)
+	obj_stats.selectedWord = len-1
 	
-if keyboard_check_pressed(vk_enter) or keyboard_check_pressed(ord("Z"))  or gamepad_button_check_pressed(0,gp_face1) {
+if scr_multiCheckButtonPressed(vk_enter, ord("Z"), gp_face1){
     audio_play_sound(snd_josh,9999,false)
-    switch(sel){
+    switch(obj_stats.selectedWord){
         case 0:
             instance_create(0,0,obj_fadeout)
             obj_fadeout.roomgo=rm_stageselect
@@ -39,6 +39,7 @@ if keyboard_check_pressed(vk_enter) or keyboard_check_pressed(ord("Z"))  or game
     }
 }
 
+//TO DO: Hide this shit to script
 if(keyboard_check(vk_alt))
 {
 	delAlpha += 0.05

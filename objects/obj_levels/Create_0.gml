@@ -1,33 +1,54 @@
 image_speed=0
 image_index=0
 y=61
-weeks=3
-sel=0
-//song info
-//failsafelol
-var b;
-for (b=0;b<weeks+1;b++) {
-    songname[b,0]=""
-    songname[b,1]=""
-    difficulty[b]=""
+
+all_files = []
+
+weeks_going = []
+
+searchfile = file_find_first(string(working_directory) + "data//weeknds//*.txt", fa_none);
+files = 0;
+
+while searchfile != ""
+{
+    files++;
+	array_push(all_files, searchfile)
+    searchfile = file_find_next();
 }
-songname[0,0]="i, robot"
-songname[0,1]=""
-difficulty[0]="easy"
-songname[1,0]="summer"
-songname[1,1]="stars"
-difficulty[1]="easy"
-songname[2,0]="girl next door"
-//gamejack funnies
-if obj_stats.playedw2=false {
-    songname[2,1]="gameplay"
-} else {
-    songname[2,1]="gamejack"
+
+weeks = files
+
+weeks_going_name = array_create(weeks, -1)
+
+for(var i = 0; i < weeks; i++){
+	for(var j = 0; j < 2; j++){
+		songname[i][j] = ""		
+	}
 }
-difficulty[2]="normal"
-songname[3,0]="twinkle"
-songname[3,1]="tsunami"
-difficulty[3]="normal"
-songname[4,0]="morning"
-songname[4,1]="rush"
-difficulty[4]="normal"
+
+sel = 0
+
+for(var b=0; b<weeks; b++)
+{
+	var weeknd_file = file_text_open_read(string(working_directory) + "data//weeknds//" + string(all_files[b]))
+	
+	var weeknd_pos = file_text_read_real(weeknd_file)
+	array_push(weeks_going, weeknd_pos)
+	var weeknd_name = string_replace(all_files[b], ".txt", "")
+	array_set(weeks_going_name, weeknd_pos, weeknd_name)
+	
+	file_text_readln(weeknd_file)
+	
+	songname[weeknd_pos][0] = file_text_read_string(weeknd_file)
+	file_text_readln(weeknd_file)
+	
+	songname[weeknd_pos][1] = file_text_read_string(weeknd_file)
+	file_text_readln(weeknd_file)
+	
+	difficulty[weeknd_pos]  = file_text_read_string(weeknd_file)
+	
+	file_text_close(weeknd_file)
+}
+
+//if !obj_stats.playedw2
+//    songname[2,1]="gameplay"

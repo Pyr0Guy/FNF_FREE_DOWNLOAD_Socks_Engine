@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_crowd",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":3,
+  "conversionMode":0,
+  "duration":44.489433,
+  "name":"snd_crowd",
+  "parent":{
+    "name":"soundeffects",
+    "path":"folders/Sounds/soundeffects.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_crowd",
+  "type":0,
+  "volume":1.0,
+}

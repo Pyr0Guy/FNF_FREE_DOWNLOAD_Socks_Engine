@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_coolText",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_coolText",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

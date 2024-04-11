@@ -1,5 +1,4 @@
 action_inherited();
-//scr_dialog("buddy", "съешь еще этих французских #булок да выпей чаю")
 scr_dialog("buddy","And that'll be 8.50#Enjoy your time on the rink!")
 scr_dialog("buddy","And hey!         #Maybe on your way out#you can check out the#arcade?")
 scr_dialog("buddy","...")
@@ -32,52 +31,60 @@ scr_dialog("buddy","Oh no way.                 #While working here like 30#arcad
 scr_dialog("buddy","I've got like a resilience to#stuff like that by now")
 scr_dialog("dude","so where did you get it from?")
 scr_dialog("buddy","...")
-/* OLD
-txt[1]="And that'll be 8.50#Enjoy your time on the rink!#"
-voice[1]="buddy"
-txt[2]="Hey!         #And maybe on your way out you#can check out the arcade!?"
-voice[2]="buddy"
-txt[3]="Yeah they didn't catch a word#of that..."
-voice[3]="buddy"
-txt[4]="It's beyond me why you#think people are gonna start#caring about the arcade again"
-voice[4]="vinyl"
-txt[5]="Whos gonna wanna play those#old crappy games anyway?"
-voice[5]="vinyl"
-txt[6]="I don't wanna hear you calling#those games crappy."
-voice[6]="buddy"
-txt[7]="Have you even played#the legend of the shadow walker?"
-voice[7]="buddy"
-txt[8]="No, I haven't.               #And no one ever will."
-voice[8]="vinyl"
-txt[9]="✓♠BUDDY-BUDDY-BUDDY#YOU GOTTA HELP ME!✓W"
-voice[9]="dude"
-txt[10]="Oh hey lil' J                   #We're continuing this later#vinyl"
-voice[10]="buddy"
-txt[11]="No we aren't"
-voice[11]="vinyl"
-txt[12]="BUDDY YOU'VE GOTTA HELP ME!#AND ITS NOT ABOUT THAT#JOB APPLICATION!!"
-voice[12]="dude"
-txt[13]="Is it about cd boy?"
-voice[13]="buddy"
-txt[14]="Yeah!          #wait what."
-voice[14]="dude"
-txt[15]="how did you know already?"
-voice[15]="buddy"
-txt[16]="I was kinda there."
-voice[16]="buddy"
-txt[17]="What?              #Where?"
-voice[17]="dude"
-txt[18]="Under the karaoke machine..."
-voice[18]="buddy"
-txt[19]="Is that where the cast is#from?"
-voice[19]="dude"
-txt[20]="oh no not at all."
-voice[20]="buddy"
-txt[21]="while working here like#30 arcade machines have#fallen on me, I've got like a#resilience to stuff like that"
-voice[21]="buddy"
-txt[22]="Yeah this is from something#completely different."
-voice[22]="buddy"
-*/
-
-/* */
-/*  */
+scr_dialog("buddy","nowhere")
+scr_dialog("vinyl","great.")
+scr_dialog("buddy","But yeah,         #I can probably fix this#guy up.")
+scr_dialog("dude","sweet!")
+scr_dialog("dude","so do you have a toolbox#somewhere or...")
+scr_dialog("buddy","Aw come on little J,       #I'm a professional!")
+scr_dialog("buddy","I don't do my work behind#the counter at an arcade")
+scr_dialog("buddy","A true master-mechanic like#me has to have a workshop!")
+scr_dialog("buddy","Let me show you.")
+scr_dialog("buddy","Hey vinyl,           #I'm going on break.")
+scr_dialog("buddy","You're gonna have to hold#things over for like...                     #anywhere between...           #3 minutes to 3 hours.")
+scr_dialog("vinyl","I hate you.")
+scr_dialog("buddy","Alright,               #heres my workshop.")
+scr_dialog("dude","uh buddy...           #thats a wall")
+scr_dialog("buddy","Guess I should have been#more specific.")
+scr_dialog("buddy","This is the entrance.")
+scr_dialog("buddy","All you gotta do is#push up against this wall and...")
+scr_dialog("buddy","✓㋡tada~")
+scr_dialog("dude","WOAAAAAH")
+scr_dialog("dude","man this is so RAD how#did you even find this place!!!")
+scr_dialog("buddy","Found it while I was on#cleaning duty.")
+scr_dialog("buddy","No idea why its here or#what it's meant for.")
+scr_dialog("buddy","But I spend most of my breaks here.#where I do my freelance work#as a mechanic.")
+scr_dialog("buddy","And I'd say its the perfect#place for someone whos planning#to take over the world.")
+scr_dialog("dude","you want to take over the#world?")
+scr_dialog("buddy","Yeah man taking over the world#would be awesome.")
+scr_dialog("buddy","Finally getting out of#this dead end job and#getting to be the one in#charge")
+scr_dialog("dude","just make sure to#give me a cool job ok?")
+scr_dialog("buddy","Yeah, you could be like.          #^YThe royal toilet scrubber.")
+scr_dialog("dude","eeeeeew!!!           #But I guess it's better than#what I have now.")
+scr_dialog("dude","...")
+scr_dialog("buddy","Well this is probably going to#take me awhile.")
+scr_dialog("buddy","I've got some spare change#If you wanna go out and#play some of the arcade games")
+scr_dialog("dude","oh no its fine!                       #I found a dollar on the ground#on my way over here!")
+scr_dialog("tv","")
+scr_dialog("dude","huh?")
+scr_dialog("buddy","Oh don't mind that,           #It's been doing that since#I brought it back here")
+scr_dialog("dude","you brought it here?")
+scr_dialog("buddy","I couldn't just leave it on#the bus!")
+scr_dialog("buddy","But it doesn't seem to be#working anyway.")
+scr_dialog("buddy","It keeps saying it's missing#files.                #The software for that old thing#is so outdated I might just use#it for parts.")
+scr_dialog("dude","but what about Teachvee!          #You'll kill him!")
+scr_dialog("buddy","who?")
+scr_dialog("dude","the little man in the computer!")
+scr_dialog("dude","he's the reason I was#able to stand up to Strad!")
+scr_dialog("dude","and he even stopped me from#getting my head handed#to me by Cyan!")
+scr_dialog("dude","he's just a little guy!               #he's just like me!")
+scr_dialog("dude","us little guys have to stick#together!                #We gotta help him!")
+scr_dialog("buddy","I guess I can put aside him#crushing my seat on the bus if he#really did all of that.")
+scr_dialog("dude","yeah!")
+scr_dialog("dude","I got my microphone still!          #I'm sure we can sing this guy#back to life!")
+scr_dialog("buddy","I'm not sure if thats how that#works but we can give that a shot.")
+scr_dialog("buddy","I even got a microphone too.")
+scr_dialog("buddy","I'm not too great at singing#so I hope you don't mind if we#sing an easy song.")
+scr_dialog("buddy","Does Twinkle sound good?")
+scr_dialog("dude","heckles yeah!")
+scr_dialog("buddy","Sweet.")

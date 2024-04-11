@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_gutsup",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":3,
+  "conversionMode":0,
+  "duration":13.266009,
+  "name":"snd_gutsup",
+  "parent":{
+    "name":"soundeffects",
+    "path":"folders/Sounds/soundeffects.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_gutsup",
+  "type":0,
+  "volume":1.0,
+}

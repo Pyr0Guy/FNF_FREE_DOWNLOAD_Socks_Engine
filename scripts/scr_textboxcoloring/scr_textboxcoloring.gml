@@ -19,13 +19,14 @@ function scr_textboxcoloring() {
 	        name="Strad"
 	    break;
 	    case "lady":
-	        font=obj_stats.fnt_lady
+	        font=fnt_lady
 	        color1 = make_colour_rgb(101,201,158)
 	        color2 = make_colour_rgb(62,164,143)
 	        namefont=fnt_comic1b
 	        namecolor1=color1
 	        namecolor2=color2
 	        name="Lady"
+			
 	    break;
 	    case "tv":
 	        font=fnt_comic1b
@@ -57,7 +58,7 @@ function scr_textboxcoloring() {
 	    case "cd-cyan":
 	        font=fnt_comic1b
 	        color1 = make_colour_rgb(117,211,232)
-	                color2 = make_colour_rgb(92,208,143)
+	        color2 = make_colour_rgb(92,208,143)
 	        namefont=fnt_comic1b
 	        namecolor1 = make_colour_rgb(159, 165, 179)
 	        namecolor2 = make_colour_rgb(120, 129, 148)
@@ -117,10 +118,28 @@ function scr_textboxcoloring() {
 	        namecolor2=color2
 	        name="Gunk"
 	    break;
+	    case "crowd":
+	        font=fnt_comic1b
+	        color1=c_gray
+	        color2=c_gray
+	        namefont=fnt_comic1b
+	        namecolor1=color1
+	        namecolor2=color2
+	        name="crowd"
+	    break;
+	    case "dan":
+	        font=fnt_comic1b
+	        color1=make_color_rgb(186,93,39)
+	        color2=make_color_rgb(142,69,39)
+	        namefont=fnt_comic1b
+	        namecolor1=color1
+	        namecolor2=color2
+	        name="Dan"
+	    break;
 	    default:
 	        font=fnt_comic1b
-	        color1 = make_colour_rgb(255,255,255)
-	        color2 = make_colour_rgb(255,255,255)
+	        color1 = c_white
+	        color2 = c_white
 	        namefont=fnt_comic1b
 	        namecolor1=color1
 	        namecolor2=color2

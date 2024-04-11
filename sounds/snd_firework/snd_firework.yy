@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_firework",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":3,
+  "conversionMode":0,
+  "duration":2.706735,
+  "name":"snd_firework",
+  "parent":{
+    "name":"soundeffects",
+    "path":"folders/Sounds/soundeffects.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":16000,
+  "soundFile":"snd_firework",
+  "type":0,
+  "volume":1.0,
+}

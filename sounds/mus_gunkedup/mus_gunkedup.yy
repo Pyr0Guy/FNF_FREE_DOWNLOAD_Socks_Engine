@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"mus_gunkedup",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":3,
+  "conversionMode":0,
+  "duration":94.28571,
+  "name":"mus_gunkedup",
+  "parent":{
+    "name":"songs",
+    "path":"folders/Sounds/songs.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mus_gunkedup",
+  "type":0,
+  "volume":0.69,
+}

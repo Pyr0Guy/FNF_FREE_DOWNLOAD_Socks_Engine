@@ -50,7 +50,7 @@ function scr_song_1(){
                         if obj_song.m%4=0 or obj_song.m=0{
                             obj_song.mm=1
                         }
-                        obj_song.mm-=0.02 * global.delta_multiplier
+                        obj_song.mm-=0.02
                         alpha=obj_song.mm
                     }
                 break;
@@ -74,16 +74,20 @@ function scr_song_1(){
             //draw_sprite_ext(sprite[type],frame,x,y,1,1,0,colorsky,0.8)
             //draw_sprite_ext(sprite[type],frame,x,y-4,1,1,0,c_black,shade)
         }
-        with(obj_player) {
-            image_alpha=0
-            scr_skinswapdude(c_white)
+         with(obj_player) {
+             image_alpha=0
+             if scr_shadercheck(shader_colorswap,c_white) {
+				draw_sprite(sprite_index,image_index,x,y)
+                shader_reset();
+                scr_skinswapdude(colorsky)
+					draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,0.8)
+                shader_reset();
+            } else {
                 draw_sprite(sprite_index,image_index,x,y)
-            shader_reset();
-            scr_skinswapdude(colorsky)
-                draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,0.8)
-                draw_sprite_ext(sprite_index,image_index,x+8,y,1,1,0,c_black,shade)
-            shader_reset();
-        }
+                draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,colorsky,0.8)
+			}
+			draw_sprite_ext(sprite_index,image_index,x+8,y,1,1,0,c_black,shade)
+		}
         with(obj_georgeghost) {
             visible=false
             draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,image_blend,image_alpha)
@@ -117,13 +121,16 @@ function scr_song_1(){
                         draw_sprite_ext(spr_dudegintro,1,0,0,1,1,0,colorsky,0.8)
                         draw_sprite_ext(spr_dudegintro,1,(-2+poob)+8,(-2+poob)+8,1,1,0,c_black,shade)
                     } else {
-                        scr_skinswapdude(c_white)
-                            draw_sprite(spr_dudegintro,0,0,0)
-                        shader_reset();
-                        scr_skinswapdude(colorsky)
-                            draw_sprite_ext(spr_dudegintro,0,0,0,1,1,0,c_white,0.8)
-                            draw_sprite_ext(spr_dudegintro,0,8,8,1,1,0,c_black,shade)
-                        shader_reset();
+                        if scr_shadercheck(shader_colorswap,c_white) {
+							draw_sprite(spr_dudegintro,0,0,0)
+                            shader_reset();
+                            scr_skinswapdude(colorsky)
+								draw_sprite_ext(spr_dudegintro,0,0,0,1,1,0,c_white,0.8)
+                            shader_reset();
+                        } else {
+							draw_sprite(spr_dudegintro,0,0,0)
+                            draw_sprite_ext(spr_dudegintro,0,0,0,1,1,0,colorsky,0.8)
+                        }
                     }
                 break;
                 case 4:
@@ -135,25 +142,25 @@ function scr_song_1(){
                 break;
                 case 6:
                     if obj_song.paused=false {
-                        obj_song.mmmmmm+=0.0002 * global.delta_multiplier
+                        obj_song.mmmmmm+=0.0002
                     }
                     draw_sprite_ext(spr_georgetvintro,0,obj_camera.x,obj_camera.y,obj_song.mmmmmm,obj_song.mmmmmm,0,c_white,1)
                 break;
                 case 7:
                     if obj_song.paused=false {
-                        obj_song.mmmmmm+=0.0002 * global.delta_multiplier
+                        obj_song.mmmmmm+=0.0002
                     }
                     draw_sprite_ext(spr_georgetvintro,1,obj_camera.x,obj_camera.y,obj_song.mmmmmm,obj_song.mmmmmm,0,c_white,1)
                 break;
                 case 8:
                     if obj_song.paused=false {
-                        obj_song.mmmmmm+=0.0002 * global.delta_multiplier
+                        obj_song.mmmmmm+=0.0002
                     }
                     draw_sprite_ext(spr_georgetvintro,2,obj_camera.x,obj_camera.y,obj_song.mmmmmm,obj_song.mmmmmm,0,c_white,1)
                 break;
                 case 9:
                     if obj_song.paused=false {
-                        obj_song.mmmmmm+=0.0002 * global.delta_multiplier
+                        obj_song.mmmmmm+=0.0002
                     }
                     draw_sprite_ext(spr_georgetvintro,3,obj_camera.x,obj_camera.y,obj_song.mmmmmm,obj_song.mmmmmm,0,c_white,1)
                 break;
@@ -161,9 +168,9 @@ function scr_song_1(){
             //skip intro
             if obj_song.songpos<25 && obj_song.songpos>0 {
                 if keyboard_check(vk_control) && obj_song.paused=false{
-                    obj_song.m+=0.02 * global.delta_multiplier
+                    obj_song.m+=0.02
                 } else { 
-                    obj_song.m-=0.02 * global.delta_multiplier
+                    obj_song.m-=0.02
                 }
                 obj_song.m=clamp(obj_song.m,0,2)
                 draw_set_font(fnt_comic2)
@@ -216,7 +223,7 @@ function scr_song_1(){
                 case 1:
                     //draw_sprite(spr_georgecutscene,3,0,0)
                     if obj_song.paused=false {
-                        obj_song.m+=0.75 * global.delta_multiplier
+                        obj_song.m+=0.75
                         var cooltext = "INCOMING FUMP"
                     } else {
                         var cooltext = "bro, really?"

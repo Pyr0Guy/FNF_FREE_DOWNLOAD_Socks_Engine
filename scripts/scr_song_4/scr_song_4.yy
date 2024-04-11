@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_song_4",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_song_4",
+  "parent":{
+    "name":"songs",
+    "path":"folders/Scripts/songs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

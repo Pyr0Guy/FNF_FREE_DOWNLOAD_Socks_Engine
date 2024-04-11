@@ -39,6 +39,8 @@ function scr_bombevent(argument0, argument1) {
 	        }
 	    break;
 	    default:
+			obj_nermal.sprite_index=obj_nermal.anim[((note))]
+	        obj_nermal.hit[note]=true
 	    break;
 	}
 

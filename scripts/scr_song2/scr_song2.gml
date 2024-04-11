@@ -86,7 +86,7 @@ function scr_song2(){
                         draw_set_alpha(0.5)
                         draw_ellipse_colour(x-160,y-20,x+140,y+20,c_white,c_white,false)
                         draw_set_alpha(1)
-                        scr_skinswapdude(c_white)
+                        scr_shadercheck(shader_colorswap,c_white)
                             draw_sprite(sprite_index,image_index,x,y)
                         shader_reset();
                         draw_sprite_ext(sprite_index,image_index,x,y+4,1,1,0,c_black,0.6)
@@ -126,9 +126,9 @@ function scr_song2(){
                         draw_set_alpha(0.5)
                         draw_ellipse_colour(x-160,y-20,x+140,y+20,c_white,c_white,false)
                         draw_set_alpha(1)
-                        scr_skinswapdude(c_white)
-                            draw_sprite(sprite_index,image_index,x,y)
-                        shader_reset();
+                        scr_shadercheck(shader_colorswap,c_white)
+						    draw_sprite(sprite_index,image_index,x,y)
+						shader_reset();
                         draw_sprite_ext(sprite_index,image_index,x,y+4,1,1,0,c_black,0.6)
                         draw_sprite_ext(spr_ireallydidntwanttomakethisasprite,0,x,0,1,1,0,c_white,1)
                         draw_sprite_ext(spr_ireallydidntwanttomakethisasprite,0,x,0,-1,1,0,c_white,1)
@@ -146,11 +146,11 @@ function scr_song2(){
                         draw_set_alpha(0.5)
                         draw_ellipse_colour(x-320,y-20,x+180,y+20,c_white,c_white,false)
                         draw_set_alpha(1)
-                        scr_skinswapdude(c_white)
+                       scr_shadercheck(shader_colorswap,c_white)
                             draw_sprite(sprite_index,image_index,x,y)
                         shader_reset();
                         draw_sprite_ext(sprite_index,image_index,x,y+4,1,1,0,c_black,0.6)
-                        with(obj_playermimic) { //lady
+                        with(obj_mimic) { //lady
                             image_alpha=0
                             draw_sprite(sprite_index,image_index,x,y)
                             draw_sprite_ext(sprite_index,image_index,x,y+4,1,1,0,c_black,0.6)
@@ -175,13 +175,17 @@ function scr_song2(){
                 case 10:
                     with(obj_player) {
                         image_alpha=0
-                        scr_skinswapdude(c_white)
+                        if scr_shadercheck(c_white) {
                             draw_sprite(sprite_index,image_index,x,y)
-                        shader_reset();
-                        scr_skinswapdude(colorsky)
-                            draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,0.8)
-                            draw_sprite_ext(sprite_index,image_index,x+4,y,1,1,0,c_black,0.5)
-                        shader_reset();
+                            shader_reset();
+                            scr_skinswapdude(colorsky)
+                                draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,0.8)
+                            shader_reset();
+                        } else {
+                            draw_sprite(sprite_index,image_index,x,y)
+                            draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,colorsky,0.8)
+                        }
+                        draw_sprite_ext(sprite_index,image_index,x+4,y,1,1,0,c_black,0.5)
                     }
                     with(obj_badguy) {
                         image_alpha=0
@@ -194,13 +198,17 @@ function scr_song2(){
                 default:
                     with(obj_player) {
                         image_alpha=0
-                        scr_skinswapdude(c_white)
+                        if scr_shadercheck(shader_colorswap,c_white) {
                             draw_sprite(sprite_index,image_index,x,y)
-                        shader_reset();
-                        scr_skinswapdude(colorsky)
-                            draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,0.8)
-                            draw_sprite_ext(sprite_index,image_index,x+4,y,1,1,0,c_black,0.5)
-                        shader_reset();
+                            shader_reset();
+                            scr_skinswapdude(colorsky)
+                                draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,0.8)
+                            shader_reset();
+                        } else {
+                            draw_sprite(sprite_index,image_index,x,y)
+                            draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,colorsky,0.8)
+                        }
+                        draw_sprite_ext(sprite_index,image_index,x+4,y,1,1,0,c_black,0.5)
                     }
                     with(obj_badguy) {
                         image_alpha=0

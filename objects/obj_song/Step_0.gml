@@ -1,8 +1,8 @@
-//trace(song, typeof(song))
-
 //pause
-if ((keyboard_check_pressed(ord("z")) or keyboard_check_pressed(vk_escape) or keyboard_check_pressed(vk_enter) or gamepad_button_check_pressed(0,gp_start)) && instance_exists(obj_midi_clock) && songpos>0.1) {
+
+if ((scr_multiCheckButtonPressed(ord("z"), vk_escape, vk_enter, gp_start)) && instance_exists(obj_midi_clock) && songpos>0.1) {
     audio_play_sound(snd_recordscratch,9999,false)
+	//pitch = 0
     if audio_is_paused(songplaying) && sel=0 {
         paused=false
         audio_resume_sound(songplaying)
@@ -12,6 +12,7 @@ if ((keyboard_check_pressed(ord("z")) or keyboard_check_pressed(vk_escape) or ke
         obj_badguy.image_index=badim
         obj_player.sprite_index=dudean
         obj_player.image_index=dudeim
+		
     } else {
         paused=true
         audio_pause_sound(songplaying)
@@ -34,6 +35,9 @@ if paused=false {
     if image_alpha>0{
         image_alpha-=0.05
     }
+	
+	//if(pitch < 1)
+	//	pitch = lerp(pitch, 1, 0.05)
 //culling
 //Dont be like me and have the culling check run every frame! It's not good for the environment!!
 if songpos >= 0.01 {
@@ -53,11 +57,13 @@ if window_has_focus() {
         ui=surface_create(400,400)
         surfaceh=true
     }
+	
 } else {
     surfaceh=false
 }
 //mcdonalds
-    if keyboard_check_pressed(ord("9")) or gamepad_button_check_pressed(0,gp_shoulderl){
+
+    if scr_multiCheckButtonPressed(ord("9"), gp_shoulderl){
         mcdonalds=!mcdonalds
 		playericon = mcdonalds ? spr_dudeicon : spr_momgotmcdonalds;
     }
@@ -84,15 +90,29 @@ if window_has_focus() {
     if songpos>=(audio_sound_length(songplaying)-0.1) {
         //scoreing
         if saved=false {
-            if coolscore>obj_stats.songscore[obj_stats.category][obj_stats.select]{
-				trace(obj_stats.category, "||", obj_stats.select)
+			/*
+            if obj_stats.botplay == false && coolscore>obj_stats.songscore[obj_stats.category][obj_stats.select]{
                 obj_stats.songscore[obj_stats.category][obj_stats.select]=coolscore
                 obj_stats.songmiss[obj_stats.category][obj_stats.select]=misses
 				obj_stats.songaccuracy[obj_stats.category][obj_stats.select]=accuracy
 				obj_stats.songnew[obj_stats.category][obj_stats.select]=false;
                 scr_saveoptions();
                 saved=true
-            }   
+			*/
+			if(obj_stats.botplay == false && (coolscore > obj_stats.songscore[? obj_stats.namesong] || !ds_map_exists(obj_stats.songscore, obj_stats.namesong)))
+			{
+				var _sName_ = obj_stats.namesong
+				obj_stats.songscore[? _sName_] = coolscore;
+				obj_stats.songmiss[? _sName_] = misses;
+				obj_stats.songaccuracy[? _sName_] = accuracy;
+				obj_stats.songnew[? _sName_] = false;
+				obj_stats.songlocked[? _sName_] = false;
+				if(!array_contains(obj_stats.what_i_need_to_save, _sName_))
+					array_push(obj_stats.what_i_need_to_save, _sName_)
+					
+				scr_saveoptions()
+				saved=true
+			}  
         }
 		game_set_speed(60, gamespeed_fps);
         //where to go
@@ -115,3 +135,9 @@ if window_has_focus() {
 }
 
 accuracy = string(min(1, max(0, totalHitNote / totalNote)) * 100)
+
+if(keyboard_check_pressed(vk_control) && obj_stats.debug)
+	audio_sound_set_track_position(songplaying, audio_sound_length(songplaying)-1)
+	
+	
+//audio_sound_pitch(songplaying, pitch);

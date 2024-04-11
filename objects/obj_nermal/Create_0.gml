@@ -22,20 +22,6 @@ numidle=0 //max number of idle animations
 everybeat=1 //how many beats per measure do you do your idle
 beat=0 //song beats
 ayy=spr_TVayy
-anim[0]=spr_TVleft
-anim[1]=spr_TVdown
-anim[2]=spr_TVup
-anim[3]=spr_TVright
-//alt animations
-anim[4]=spr_TVleftalt
-anim[5]=spr_TVdownalt
-anim[6]=spr_TVupalt
-anim[7]=spr_TVrightalt
-//bomb animations
-anim[8]=spr_TVleft
-anim[9]=spr_TVdown
-anim[10]=spr_TVup
-anim[11]=spr_TVright
 //miss
 pause=spr_nermalpause
 

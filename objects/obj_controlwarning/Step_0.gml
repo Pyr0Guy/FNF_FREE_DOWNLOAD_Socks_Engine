@@ -15,7 +15,12 @@ if randomfunny!=99 {
 //continue
 if (keyboard_check_pressed(vk_enter) or keyboard_check_pressed(ord("Z")) or gamepad_button_check_pressed(0,gp_face1)) {
     audio_stop_all();
-    audio_play_sound(snd_ha,9999,false)
+	
+	if(sound_play == false)
+	{
+		audio_play_sound(snd_ha,9999,false)
+		sound_play = true
+	}
     obj_stats.seenpopup=true
     alarm[0]=40
     if randomfunny=99 {

@@ -1,337 +1,334 @@
 action_inherited();
-scr_dialog("CDEE","✓♠BRAVO! BRAVO!")
-scr_dialog("cd","✓♠CRITICAL ERROR")
-scr_dialog("CD-BOY","✓♠NO")
-scr_dialog("CD-BOY","✓♠LISTEN-TO-ME")
-scr_dialog("CD-BOY","✓♠I-DON'T-WANT#TO-BE-HERE")
-scr_dialog("CD-BOY","✓♠DUDE")
-scr_dialog("CD-BOY","✓♠I-CAN-SEE-IT")
-scr_dialog("buddy","shut up!")
-scr_dialog("peeb","...")
-scr_dialog("peeb","...")
-scr_dialog("cd","//hello world")
-scr_dialog("dude","oh shoot he's up!")
-scr_dialog("dude","a-are you going to kill me?")
-scr_dialog("cd","//probably at some point.")
-scr_dialog("dude","oh hey he's normal again")
-scr_dialog("buddy","Yeah that sounds#about right.")
-scr_dialog("buddy","That anti-virus just#finished installing")
-scr_dialog("buddy","It didn't find anything#though.")
-scr_dialog("buddy","Where did--")
-scr_dialog("tv","CONGRATULATIONS ^Y[DUDE]^W!")
-scr_dialog("tv","YOU BEAT THE BADGUY#AND WON THE PRIZE!")
-scr_dialog("tv","ALL BY YOURSELF.")
-scr_dialog("buddy","*clears throat*")
-scr_dialog("tv","YOURSELVES")
-scr_dialog("dude","where were you TeachVee!       #we could have used#your help with that virus!")
-scr_dialog("tv","I HELPED")
-scr_dialog("dude","what?")
-scr_dialog("cd","//I really doubt it")
-scr_dialog("cd","//wait a cycle")
-scr_dialog("cd","//my internal clock is offline                  #//what time is it?")
-scr_dialog("buddy","uhh...          #5:32")
-scr_dialog("dude","...")
-scr_dialog("dude","!!!")
-scr_dialog("dude","✓♠AAAAAAAAAAAAAAAAAAAAA✓W#CYAN IS GOING TO KILL ME")
-scr_dialog("dude","OK CD BOY ITS TIME TO#GO")
-scr_dialog("cd","^Ascr_setTime^Q(^Z'to go'^Q);")
-scr_dialog("dude","C'MON C'MON C'MON!")
-scr_dialog("buddy","Hey wait! You forgot your#free t-shirt!")
+scr_dialog("buddy","Well.              #That didn't really seem to work.") //buddy stumped
+scr_dialog("cd","✓♠CRITICAL ALERT#CRITICAL ALERT#CRITICAL ALERT") //cd boy freaking out
+scr_dialog("buddy","alright-alright!#I'll take a look at you.")
+scr_dialog("buddy","...") //buddy looking at cd boy
+scr_dialog("buddy","oh come on.") //dude asking whats going on (ALT)
+scr_dialog("dude","whats going on?")
+scr_dialog("buddy","All the comments Cyan#left in her code are in#leet speak.")
+scr_dialog("buddy","We get it man!            #You use the internet!              #Everyone under the age of 90 does!")
+scr_dialog("buddy","'^X//TH15 5CR1PT M4K35 H1M C00L L0L^W'             #This craps impossible to read.") //(ALT)
+scr_dialog("buddy","Thats not even all of it.           #She didn't even put an#anti-virus on this guy.")
+scr_dialog("dude","a what?")
+scr_dialog("buddy","ok like,                 #you know how humans have#skulls to protect their#brains.")
+scr_dialog("buddy","From like,                        #a pinecone hitting your brain#and killing you.")
+scr_dialog("dude","i have nightmares about#that happening actually.")
+scr_dialog("buddy","Must be terrifying")
+scr_dialog("buddy","But like, an anti-virus#is like a robots skull#protecting it's brain.")
+scr_dialog("buddy","And Cyan,                 #the creator of the first fully#sentient android,                  #possibly the first of its kind!")
+scr_dialog("buddy","Didn't think to put an anti-virus#in him.")
+scr_dialog("buddy","I can't tell if I just can't#comprehend her genius or if#she doesn't know the first#thing about web safety.")
+scr_dialog("dude","i have no idea what any of this#means.")
+scr_dialog("buddy","right.")
+scr_dialog("buddy","...") //dude and buddy standing their akwardly
+scr_dialog("buddy","Hey,                      #wheres Lady?                    #You usually always hang out with#her.") //ALT
+scr_dialog("dude","oh shes off with her dad#visiting her mom at work.") //ALT
+scr_dialog("dude","her moms been working#alot of overtime.                #apparently theres been this#break through? or something?")
+scr_dialog("dude","but Lady has been pretty#bummed out about it.          #she and her mom are really#close.")
+scr_dialog("dude","and her moms been gone for#like,         #a billion years!")
+scr_dialog("buddy","Oh that sucks man.         #Hope she's doing ok.")
 scr_dialog("buddy","...")
-scr_dialog("buddy","No one ever wants the t-shirt")
-scr_dialog("dude","C'MON C'MON C'MON!")
-scr_dialog("dude","✓♠OUGH!!!")
-scr_dialog("dude","oh jeez! sorry man!          #I didn't see you there!")
-scr_dialog("gunk?","...")
-scr_dialog("dude","uh...                      #whats that look for")
-scr_dialog("gunk?","oookay you got me")
-scr_dialog("dude","what?")
-scr_dialog("gunk?","bro you got me#you dont have to#play dumb anymore.")
-scr_dialog("dude","uuuh, cd-boy?")
-scr_dialog("cd","//...")
-scr_dialog("cd","//my facial recognition#//software is offline.")
-scr_dialog("cd","//I don't know#//who you are miss")
-scr_dialog("gunk?","Yeah right, cut the crap!")
-scr_dialog("peeb","...")
-scr_dialog("gunk","you know I'm gunk!")
-scr_dialog("cd","^Ascr_playsound^Q(^Zsnd_gasp^Q);")
-scr_dialog("dude","Wait! like the popstar!?")
-scr_dialog("gunk","uh... yeah???")
-scr_dialog("gunk","Wait did you do two seriously#not know?")
-scr_dialog("cd","//its almost as if we#//were telling you that#//the whole time.")
-scr_dialog("cd","//good job blowing your cover.")
-scr_dialog("cd","//maybe next time someone else#//can see through your disguise")
-scr_dialog("gunk","✓♠uuuuuuuuuugh")
-scr_dialog("gunk","man you guys can't let#anyone know I go here.")
-scr_dialog("dude","is it that embarrising for people#know that you play video games?")
-scr_dialog("gunk","No, not               #not that.")
-scr_dialog("gunk","this is the only place#where people don't know#I'm gunk.")
-scr_dialog("gunk","I can't go anywhere without#getting swarmed by people.")
-scr_dialog("gunk","just keep your#mouth shut okay.")
-scr_dialog("cd","//what would we get#//out of it")
-scr_dialog("gunk","ugh, you want an autograph#or something?")
-scr_dialog("dude","A BILLION DOLLARS--")
-scr_dialog("cd","//give us 4 ultra super deluxe#//tickets to your next show")
-scr_dialog("gunk","yeah-yeah alright sure here.")
-scr_dialog("gunk","now scram!")
-scr_dialog("dude","yeah ok,     #im late to being beat up#by a girl with cyan#hair anyway")
-scr_dialog("gunk","what?")
-scr_dialog("dude","so what are you going#to do with those 4 tickets?")
-scr_dialog("cd","//2 are for me and my#//creator cyan")
-scr_dialog("cd","//these 2 are for you#//and your lady-friend")
-scr_dialog("cd","//for what its worth.")
-scr_dialog("cd","//these tickets should#//calm down cyan#//for you being late")
-scr_dialog("dude","oh sweet thanks man!         #She's going to love this!")
-scr_dialog("dude","whats so special about#these tickets anyway?")
-scr_dialog("dude","what makes them                    #✓㋡'super ultra deluxe'")
-scr_dialog("cd","//these tickets allow you#//to go on-stage and sing with#//gunk herself")
-scr_dialog("dude","...")
+scr_dialog("buddy","So like,             #how DID you two get together?")
+scr_dialog("buddy","Were you like,          #'Hey most popular girl at school!'           #'I know you know nothing about me#but...'")
+scr_dialog("buddy","'Wanna hang out sometime?'")
+scr_dialog("dude","it's kinda a long story")
+scr_dialog("buddy","Well I just gotta install#an anti-virus onto this thing#And thats gonna take awhile.                    #So we've got the time.")
+scr_dialog("dude","coolio!")
+scr_dialog("dude","we actually met here!              #I was out on the rink") //flashback 1
+scr_dialog("dude","of course, using my socks#as skates.                     #can't really afford those#expensive skates.")
+scr_dialog("buddy","Dude you could have just asked#me for a pair I wouldnt have#made you pay.")
+scr_dialog("dude","-And all of a sudden I hear#all this laughing.") //flashback 2
+scr_dialog("dude","I look over and see#its those popular girls#and lady.") //flashback 3
+scr_dialog("dude","I was embarrassed and I felt#so stupid.") //flashback 4
+scr_dialog("buddy","And then you thought, 'thats the#girl I want to spend the#rest of my life with!'")
+scr_dialog("dude","I'm getting there!")
+scr_dialog("dude","they were all laughing at me                    #execpt Lady.") //flashback 5
+scr_dialog("dude","yeah, instead she comes over#and wanted to skate with me!") //flashback 6
+scr_dialog("buddy","Well isn't that adorable.")
+scr_dialog("dude","later we left to go to the#arcade and we've#been seeing each other ever since!") //flashback 7
+scr_dialog("buddy","I think thats my favorite#part of the story.")
+scr_dialog("dude","the end?")
+scr_dialog("buddy","No, the arcade.")
+scr_dialog("buddy","So like,               #is it true that she doesn't talk               #like at all.")
+scr_dialog("dude","not a word")
+scr_dialog("buddy","And thats not weird to you?")
+scr_dialog("dude","i wouldn't change a thing#about her.")
+scr_dialog("buddy","✓㋡*snif snif*✓W                #aw man whats that smell,                #Oh yeah its just how CHEESY#you are!")
+scr_dialog("dude","whaaaat! it's true!!!!")
+scr_dialog("buddy","So...                        #Does she know?")
+scr_dialog("dude","about the homeless thing?                   #No way I could never tell her!")
+scr_dialog("buddy","whaaaaat")
+scr_dialog("dude","her parents would go NUTS if#they found out she was#dating a bum like me!") //dude explain
+scr_dialog("dude","and Lady worries about me#enough already!")
+scr_dialog("dude","she already has enough to#worry about with everything#with her mom!")
+//scr_dialog("dude","It would be selfish of me#to make her worry about#her boyfriend being#homeless!")        subtlety level 1000000
+scr_dialog("dude","it would be selfish for me#to make her worry#about more stuff!")
+scr_dialog("buddy","Little J you're not being#selfish, you dont have#a place to live!") //buddy responce
+scr_dialog("buddy","I let you sleep in my van#when it gets cold like this!")
+scr_dialog("buddy","And even then I always#have to convince you to stay.")
+scr_dialog("dude","because you shouldn't have#to be worrying about me")
+scr_dialog("dude","you've got your own stuff to#worry about.")
+scr_dialog("buddy","I can't just let you sleep#on the streets")
+scr_dialog("dude","...") //dude silent
+scr_dialog("dude","can we just talk about#something else") //dude offtopic
+scr_dialog("buddy","...")
+scr_dialog("buddy","Alright, but you can't keep#putting this off.")
+scr_dialog("buddy","You can't keep lying to her man.")
+scr_dialog("buddy","You think she'd feel bad if#she knew you were#homeless?")
+scr_dialog("buddy","Imagine how bad she would feel if#she knew you were lying to#her about it.")
+scr_dialog("buddy","If she knew you were#refusing help so that#she didn't have to feel bad.")
+scr_dialog("dude","...                    #you're right.")
+scr_dialog("peeb","*slam sound*") //wtf
+scr_dialog("buddy","hey man! that anti-virus#isn't done downloading!")
+scr_dialog("cd","✓♠CRITICAL ERROR")
+scr_dialog("CD-BOY","✓♠WHY-CAN'T-I-OPEN-THE-DOOR") //look at camera
+scr_dialog("dude","what is he talking about!") //what is he talking about
+scr_dialog("CD-BOY","✓♠DUDE")
+scr_dialog("cd","✓♠CRITICAL ERROR")
+scr_dialog("CD-BOY","✓♠OPEN")
+scr_dialog("CD-BOY","✓♠THE")
+scr_dialog("CD-BOY","✓♠DOOR")
+scr_dialog("dude","why can't you!")
+scr_dialog("CD-BOY","✓♠MY-MIND-IS-FREE##MY-BODY-IS-STILL--")
+scr_dialog("cd","✓♠CRITICAL ERROR")
+scr_dialog("CDEE","IT IS AGAINST THE RULES!")
+scr_dialog("CDEE","CHEATING NEVER GETS YOU FAR--")
+scr_dialog("cd","✓♠CRITICAL ERROR")
+scr_dialog("CD-BOY","✓♠KNOCK-IT-OFF--")
+scr_dialog("cd","✓♠CRITICAL ERROR")
+scr_dialog("cd","✓♠//connection established with#//'S's karaoke machine")
+scr_dialog("cd","✓♠//HELP ME               #//GET ^xTHEM^W OUT")
+scr_dialog("cd","✓♠AFSDFASDFVFGDFGSDFH")
+scr_dialog("dude","UH")
+scr_dialog("buddy","We can't let him out#yet!")
+scr_dialog("dude","what are we going to#do he's going nuts!")
+scr_dialog("buddy","Well... he wants to sing?          #part of him atleast")
+scr_dialog("buddy","We can try stalling him with#a song until the anti-virus#downloads")
+scr_dialog("dude","like a 2-v-1?")
+scr_dialog("buddy","Yeah, just          #try not to sing over me.")
+scr_dialog("buddy","And dont let him get away!")
+
+
+
+
+
+//scr_dialog("buddy","That's like riding a bike#without a helmet!")
+
+
 
 
 /*
-txt[1]="BRAVO! BRAVO!"
+txt[1]="✓♠✓㋡ANAN$@!✓W"
 voice[1]="cd"
-txt[2]="✓♠✓㋡ANAN$@!"
-voice[2]="cd"
-txt[3]="✓♠✓㋡NO"
-voice[3]="cd"
-txt[4]="✓♠✓㋡LISTEN-TO-ME"
-voice[4]="cd"
-txt[5]="✓♠✓㋡I-DON'T-WANT#TO-BE-HERE"
-voice[5]="cd"
-txt[6]="✓♠✓㋡J"
-voice[6]="cd"
-txt[7]="✓♠✓㋡I-CAN-SEE-IT"
-voice[7]="cd"
-txt[8]="✓♠✓㋡YOU-HAVE-TO-LET-ME"
-voice[8]="cd"
-txt[9]="shut up!"
-voice[9]="buddy"
-txt[10]="✓♠*WHAM*"
-voice[10]="peeb"
-txt[11]="..."
-voice[11]="peeb"
-txt[12]="oh shoot he's up!"
-voice[12]="dude"
-txt[13]="a-are you going to kill me?"
-voice[13]="dude"
-txt[14]="//probably at some point."
-voice[14]="cd"
-txt[15]="oh hey he's normal again"
-voice[15]="dude"
-txt[16]="yeah that sounds#about right."
-voice[16]="buddy"
-txt[17]="that anti-virus just#finished installing"
-voice[17]="buddy"
-txt[18]="it didn't find anything#though."
-voice[18]="buddy"
-txt[19]="where did-"
-voice[19]="buddy"
-txt[20]="CONGRATULATIONS!"
-voice[20]="tv"
-txt[21]="YOU BEAT THE BADGUY#AND WON THE PRIZE!"
-voice[21]="tv"
-txt[22]="ALL BY YOURSELF."
-voice[22]="tv"
-txt[23]="*clears throat*"
-voice[23]="buddy"
-txt[24]="YOURSELVES"
-voice[24]="tv"
-txt[25]="where were you TeachVee!       #we could have used#your help with that virus!"
-voice[25]="dude"
-txt[26]="I HELPED"
-voice[26]="tv"
-txt[27]="what?"
-voice[27]="dude"
-txt[28]="I forgot I left a line here"
-voice[28]="peeb"
-txt[29]="//I really doubt it"
-voice[29]="cd"
-txt[30]="//wait a cycle"
-voice[30]="cd"
-txt[31]="//my internal clock is offline                  #//what time is it?"
-voice[31]="cd"
-txt[32]="uhh...          #5:32"
-voice[32]="buddy"
-txt[33]="..."
-voice[33]="dude"
-txt[34]="!!!"
-voice[34]="dude"
-txt[35]="✓♠AAAAAAAAAAAAAAAAAAAAA✓W#CYAN IS GOING TO KILL ME"
-voice[35]="dude"
-txt[36]="OK CD BOY ITS TIME TO#GO"
-voice[36]="dude"
-txt[37]="//scr_setTime('to go')"
-
-voice[37]="cd"
-txt[38]="C'MON C'MON C'MON!"
-voice[38]="dude"
-txt[39]="hey wait! you forgot your#free t-shirt!"
-voice[39]="buddy"
-txt[40]="..."
-voice[40]="buddy"
-txt[41]="no one ever wants the t-shirt"
-voice[41]="buddy"
-//oh wait! they forgot their karaoke machine--
-
-//...
-
-txt[42]="*running!!!*"
-voice[42]="peeb"
-txt[43]="✓♠OUGH!!!"
-voice[43]="dude"
-txt[44]="oh jeez! sorry man!          #I didn't see you there!"
-voice[44]="dude"
-txt[45]="oh!               #here are your shades"
-voice[45]="dude"
-
-
-txt[45]="uh whats that look for"
-voice[45]="dude"
-txt[46]="oookay you got me"
-voice[46]="gunk?"
-txt[47]="what are you talking about man?"
-voice[47]="dude"
-txt[48]="bro you got me#you dont have to#play dumb anymore."
-voice[48]="gunk?"
-txt[49]="uuuh cd-boy?"
-voice[49]="dude"
-
-txt[50]="//..."
-voice[50]="cd"
-txt[51]="//my facial recognition#//software is disabled"
-voice[51]="cd"
-txt[52]="//I really don't know#//who you are miss"
-voice[52]="cd"
-txt[53]="Yeah right, cut the crap               #you know I'm gunk!"
-voice[53]="gunk?"
-txt[54]="scr_playsound(snd_gasp);"
-voice[54]="cd"
-txt[55]="you know, I thought I#was being smart hiding here."
-voice[55]="gunk"
-txt[56]="Like nobody goes to#the arcade anymore!"
-voice[56]="gunk"
-txt[57]="Whatever I guess that didn't#stop you bloodhounds from#getting on my trail"
-voice[57]="gunk"
-txt[58]="Listen I understand if you#want an interview or something#but you can't let anyone#know I go here"
-voice[58]="gunk"
-
-txt[56]="listen you can't tell#anyone I go here!"
-voice[56]="gunk"
-txt[57]="what would it ruin your#precious reputation"
-voice[57]="dude"
-txt[58]="no!              #this is the only place#where people don't know#I'm gunk!"
-voice[58]="gunk"
-txt[58]="you're real funny you know#that right."
-//mention that nobody goes to the arcade
-txt[59]="just keep your#mouth shut okay."
-voice[59]="gunk"
-txt[60]="//and what do we get#//out of it"
-voice[60]="cd"
-txt[61]="ugh, you want an autograph#or something?"
-voice[61]="gunk"
-txt[62]="we could sing!--"
-voice[62]="dude"
-txt[63]="//give us 4 ultra super deluxe#//tickets to your next show"
-voice[63]="cd"
-txt[64]="yeah-yeah alright sure here."
-voice[64]="gunk"
-txt[65]="now scram!"
-voice[65]="gunk"
-txt[66]="yeah ok,     #im late to being beat up#by a girl with cyan#hair anyway"
-voice[66]="dude"
-txt[67]="so what are you going#to do with those 4 tickets?"
-voice[67]="dude"
-txt[68]="//2 are for me and my#//creator cyan"
-voice[68]="cd"
-txt[69]="//these 2 are for you#//and your lady-friend"
-voice[69]="cd"
-txt[70]="//for what its worth."
-voice[70]="cd"
-txt[71]="//these tickets should#//calm down cyan#//for you being late"
-voice[71]="cd"
-txt[72]="oh sweet thanks man!         #shes going to love this!"
-voice[72]="dude"
-txt[73]="whats so special about#these tickets anyway?"
-voice[73]="dude"
-txt[74]="what makes them                    #✓㋡'super ultra deluxe'"
-voice[74]="dude"
-txt[75]="//these tickets allow you#//to go on-stage and sing with#//gunk herself"
-voice[75]="cd"
-txt[76]="..."
-voice[76]="dude"
-textmax=76
-
-/*
-txt[1]="///HELLO WORLD"
-voice[1]="cd"
-txt[2]="Looks like somebodys up#and running."
+txt[2]="alright, ill look#at you"
 voice[2]="buddy"
-txt[3]="//human man        #//my I inquire my whereabouts."
-voice[3]="cd"
-txt[4]="You're at the arcade.            #Me and lil' J over here#were fixing you up."
+txt[3]="alright lets see whats#up with this guy."
+voice[3]="buddy"
+txt[4]="..."
 voice[4]="buddy"
-txt[5]="//I had no idea the little human#//was even capible of tieing#//his own shoes."
-voice[5]="cd"
-txt[6]="scr_audioplay(snd_own);"
-voice[6]="cd"
-txt[7]="//none the less I do appreciate#//you two repairing my systems."
-voice[7]="cd"
-txt[8]="//Dude             #//my respect for you has risen by..."
-voice[8]="cd"
-txt[9]="//42%"
-voice[9]="cd"
-txt[10]="HEEEY! now thats what im#farking talking about!"
+txt[5]="oh come on man."
+voice[5]="buddy"
+txt[6]="whats going on?"
+voice[6]="dude"
+txt[7]="All the comments Cyan#left in her code are in#leet speak."
+voice[7]="buddy"
+txt[8]="We get it man!            #You use the internet!              #Everyone under the age of 90 does!"
+voice[8]="buddy"
+txt[9]="Thats not even all of it.           #She didn't even put an#anti-virus on this guy."
+voice[9]="buddy"
+txt[10]="A what?"
 voice[10]="dude"
-txt[11]="I can see it now!             #Dude and CD-boy!           #Friends forever!"
-voice[11]="dude"
-txt[12]="//...                          #//my respect for you has now#//gone down to 35%"
-voice[12]="cd"
-txt[13]="darnit"
+txt[11]="ok like,                 #you know how humans have#skulls to protect their#brains."
+voice[11]="buddy"
+txt[12]="From like,                        #a pinecone hitting your brain#and killing you."
+voice[12]="buddy"
+txt[13]="I have nightmares about#that happening actually."
 voice[13]="dude"
-txt[14]="oh!              #My break ends in like 2#minutes."
+txt[14]="Must be terrifying"
 voice[14]="buddy"
-txt[15]="You guys should probably#get going"
+txt[15]="But like, an anti-virus#is like a robots skull#protecting it's brain."
 voice[15]="buddy"
-txt[16]="And dude, remember what#I said about confidense."
+txt[16]="And cyan, with her infinite#knowledge.                    #Didn't give cd boy one."
 voice[16]="buddy"
-txt[17]="//you have confidense problems?"
-voice[17]="cd"
-txt[18]="//I have just the thing"
-voice[18]="cd"
-txt[19]="//my creator cyan programed me#with a programed to increase#the users confidense levels"
-voice[19]="cd"
-txt[20]="Why would someone like CYAN#need a confidense program?"
+txt[17]="..."
+voice[17]="buddy"
+txt[18]="Hey,                      #wheres Lady?"
+voice[18]="buddy"
+txt[19]="Oh shes off with her dad#visiting her mom at work."
+voice[19]="dude"
+txt[20]="Her moms been working#alot of overtime.                #apperently theres been this#break through? or something?"
 voice[20]="dude"
-txt[21]="//my creator cyan is great#//at putting up an act."
-voice[21]="cd"
-txt[22]="//she often fakes her#//confidence"
-voice[22]="cd"
-txt[23]="//'fake it till you make it'#//she says"
-voice[23]="cd"
-txt[24]="//why do you think she#//had to make a friend#//to play with?"
-voice[24]="cd"
-txt[25]="Geez I guess I never#though about it that way."
-voice[25]="dude"
-txt[26]="Well! uh...        #What are you waiting for!!!!!#Bring it on....?"
-voice[26]="dude"
-txt[27]="scr_confidenceTest('easy')"
-voice[27]="cd"
-txt[28]="{HEY THERE PUNK!}                  #{GIVE ME YOUR LUNCH MONEY}"
-voice[28]="cd"
-txt[29]="Uh.....                        #no?"
+txt[21]="But Lady has been pretty#bummed out about it.          #her and her mom were really#close"
+voice[21]="dude"
+txt[22]="And shes been gone for#like,         #a billion years!"
+voice[22]="dude"
+txt[23]="Oh that sucks.         #Hope she's doing ok."
+voice[23]="buddy"
+txt[24]="..."
+voice[24]="buddy"
+txt[25]="So like,             #how DID you too get together?#"
+voice[25]="buddy"
+txt[26]="Were you like,          #'Hey most popular girl at school!'           #'wanna see the cardboard box#I sleep in!'"
+voice[26]="buddy"
+txt[27]="Its kinda a long story"
+voice[27]="dude"
+txt[28]="Well we've got awhile               #this thing is taking forever to#install."
+voice[28]="buddy"
+txt[29]="coolio!"
 voice[29]="dude"
-txt[30]="OW MY RIBS!"
+txt[30]="I actually met here!              #I was out on the rink"
 voice[30]="dude"
-txt[31]="Yeah you might need#to work on that abit."
-voice[31]="buddy"
-txt[32]="THIS PART ISN'T DONE#EITHER LOL"
-voice[32]="peeb"
-textmax=32
+txt[31]="of course, using my socks#as skates.                     #can't really afford those#expensive skates."
+voice[31]="dude"
+txt[32]="It is 4$ to rent a pair."
+voice[32]="buddy"
+txt[33]="And all of a sudden I hear#all this laughing."
+voice[33]="dude"
+txt[34]="I look over and see#its those popular girls#and lady."
+voice[34]="dude"
+txt[35]="I was embarrassed and I felt#so stupid."
+voice[35]="dude"
+txt[36]="And then you thought, 'thats the#girl I want to spend the#rest of my life with!'"
+voice[36]="buddy"
+txt[37]="I'm getting there!"
+voice[37]="dude"
+txt[38]="They were all laughing at me                    #execpt Lady."
+voice[38]="dude"
+txt[39]="Yeah, instead she comes over#and wanted to skate with me!"
+voice[39]="dude"
+txt[40]="Well isn't that adorable."
+voice[40]="buddy"
+txt[41]="Later we left to go to the#arcade later and we've#been seeing eachother ever since!"
+voice[41]="dude"
+txt[42]="I think thats my favorite#part of the story."
+voice[42]="buddy"
+txt[43]="The end?"
+voice[43]="dude"
+txt[44]="No the arcade."
+voice[44]="buddy"
+txt[45]="So like,               #is it true that she doesn't talk               #like at all."
+voice[45]="buddy"
+txt[46]="Not a word"
+voice[46]="dude"
+txt[47]="And thats not weird to you?"
+voice[47]="buddy"
+txt[48]="I wouldn't change a thing#about her."
+voice[48]="dude"
+txt[49]="*snif snif*                #aw man whats that smell,                #Oh yeah its just how CHEESY#you are!"
+voice[49]="buddy"
+txt[50]="Whaaaat! it's true!!!!"
+voice[50]="dude"
+txt[51]="So...                        #does she know?"
+voice[51]="buddy"
+txt[52]="About the homeless thing?                   #No way I could never tell her!"
+voice[52]="dude"
+txt[53]="dude whaaaaat"
+voice[53]="buddy"
+txt[54]="Her parents would go NUTS if#they found out she was#dating a bum like me!"
+voice[54]="dude"
+txt[55]="And Lady worries about me#enough already!"
+voice[55]="dude"
+txt[56]="She already has enough to#worry about with everything#with her mom!"
+voice[56]="dude"
+txt[57]="It would be selfish of me#to make her worry about#her boyfriend being#homeless!"
+voice[57]="dude"
+txt[58]="Lil' J you're not being#selfish, you dont have#a place to live!"
+voice[58]="buddy"
+txt[59]="I let you sleep in my car#when it gets cold like this!"
+voice[59]="buddy"
+txt[60]="And even then I always#have to convince you to stay."
+voice[60]="buddy"
+txt[61]="Because you shouldn't have#to be worrying about me"
+voice[61]="dude"
+txt[62]="It's not your job#to have to look after#me"
+voice[62]="dude"
+txt[63]="I can't just let you sleep#on the streets"
+voice[63]="buddy"
+txt[64]="..."
+voice[64]="dude"
+txt[65]="Can we just talk about#something else"
+voice[65]="dude"
+txt[66]="..."
+voice[66]="buddy"
+txt[67]="alright, but you can't keep#putting this off."
+voice[67]="buddy"
+txt[68]="you can't keep lying to her man."
+voice[68]="buddy"
+txt[69]="you think she'd feel bad if#she knew you were#homeless?"
+voice[69]="buddy"
+txt[70]="imagine how bad she would feel if#she knew you were lying to#her about it."
+voice[70]="buddy"
+txt[71]="if she knew you were#refusing help so that#she didn't have to feel bad."
+voice[71]="buddy"
+txt[71]="...                    #you're right."
+voice[71]="dude"
+
+txt[72]="*slam sound*"
+voice[72]="peeb"
+txt[73]="*cd boy opening and#closing door over#and over lol*"
+voice[73]="peeb"
+txt[74]="hey man! that anti-virus#isn't done downloading!"
+voice[74]="buddy"
+txt[75]="*cd boy opens door (again lol)*                           #*closes it again*"
+voice[75]="peeb"
+txt[76]="✓♠✓㋡ANAN$@!✓W"
+voice[76]="cd"
+txt[77]="✓♠✓㋡WHY-CANT-I-OPEN-THE-DOOR✓W"
+voice[77]="cd"
+txt[78]="what is he talking about!"
+voice[78]="dude"
+txt[79]="✓♠✓㋡J-"
+voice[79]="cd"
+txt[80]="✓♠✓㋡ANAN$@!"
+voice[80]="cd"
+txt[81]="✓♠✓㋡OPEN"
+voice[81]="cd"
+txt[82]="✓♠✓㋡THE"
+voice[82]="cd"
+txt[83]="✓♠✓㋡DOOR"
+voice[83]="cd"
+txt[84]="why can't you!"
+voice[84]="dude"
+txt[85]="✓♠✓㋡I-CANT-"
+voice[85]="cd"
+txt[86]="✓♠✓㋡ANAN$@!"
+voice[86]="cd"
+txt[87]="ITS AGAINST THE RULES!"
+voice[87]="cd"
+txt[88]="YOU GOT TO HIT THE NOTES!"
+voice[88]="cd"
+txt[89]="✓♠✓㋡ANAN$@!"
+voice[89]="cd"
+txt[90]="✓♠✓㋡KNOCK-IT-OFF-"
+voice[90]="cd"
+txt[91]="✓♠✓㋡ANAN$@!"
+voice[91]="cd"
+txt[92]="//connection established with#//'S's karaoke machine'"
+voice[92]="cd"
+txt[93]="✓♠//LITTLE HUMAN           #//HELP ME"
+voice[93]="cd"
+txt[94]="UUH"
+voice[94]="dude"
+txt[95]="we can't let him out#yet!"
+voice[95]="buddy"
+txt[96]="what are we going to#do he's gone nuts!"
+voice[96]="dude"
+txt[97]="uh..."
+voice[97]="buddy"
+txt[98]="well... he wants to sing?          #part of him atleast!"
+voice[98]="buddy"
+txt[99]="we can try stalling him with#a song until the anti-virus#downloads"
+voice[99]="buddy"
+txt[100]="like a 2-v-1?"
+voice[100]="dude"
+txt[101]="yeah, just          #try not to sing over me."
+voice[101]="buddy"
+txt[102]="and dont let him get away!"
+voice[102]="buddy"
+textmax=102
 
 /* */
 ///variables
-pause=false
-
+doorslam=0
 /* */
 /*  */

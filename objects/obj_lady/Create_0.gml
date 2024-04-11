@@ -39,6 +39,26 @@ switch(obj_stats.weekgoing)
 			
 		drawgirl = true
 	break;
+	case 7:
+		image_alpha=0
+		drawgirl=false
+		var k;
+		for (k=0;k<8;k++) {
+		    if k%2=0 or k=0 {
+		        sprite[k]=spr_ladycidleleft
+		    } else {
+		        sprite[k]=spr_ladycidleright
+		    }
+		}
+	break;
+	case 8:
+		var k;
+	    for (k=0;k<8;k++) {
+	        sprite[k]=spr_ladysad
+	    }
+		drawgirl=false
+		image_alpha=0
+	break;
 	default:
 		drawgirl = true
 		var k;

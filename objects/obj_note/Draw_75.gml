@@ -1,4 +1,5 @@
 /// @description drawing notes
+/*
 switch(type) {
     case 1: //regular notes
         draw_sprite_ext(sprite,note,x*2,y*2,2,2,0,image_blend,image_alpha)
@@ -24,3 +25,4 @@ switch(type) {
     break;
 }
 //draw_text(x*2,y*2,type)
+*/

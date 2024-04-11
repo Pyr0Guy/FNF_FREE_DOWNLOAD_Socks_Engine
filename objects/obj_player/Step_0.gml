@@ -1,43 +1,57 @@
 /// @description key press old
 /* */
 ///hit note new
+
 if obj_song.paused=false {
     var n;
     for (n=0;n<obj_song.notes;n++) {
+		
         //actually hit note
-        if obj_stats.botplay || keyboard_check_pressed(obj_stats.bind[n]) or gamepad_button_check_pressed(0,obj_stats.bind[n+4]) {
-			if hit[n] == true {
+	       if scr_multiCheckButtonPressed(bind[n],bind[n+4]){
+				if hit[n] == true {
 			
-                hit[n]=false
-                press=true
-                frame=0
-				combo++
-                sprite_index=anim[n]
-            } else {
-                obj_song.skill+=1+(4*(1-obj_song.flow))
-                obj_song.flow-=0.1
-                obj_song.misses+=1
-                obj_song.coolscore-=50
-				if(combo > highCombo)
-					highCombo = combo
-				combo = 0
-                press=true
-                frame=0
-                sprite_index=anim[(n+8)]
-                //sound
-                randomize();
-                var ow = audio_play_sound(snd_owch,9999,false)
-                var pitch = 0.6 + random(0.8)
-                audio_sound_pitch(ow,pitch)
-            }
-        }
-    }
+	                hit[n]=false
+	                press=true
+	                frame=0
+					combo++
+	                sprite_index=anim[n]
+	            } else {
+	                obj_song.skill+=1+(4*(1-obj_song.flow))
+	                obj_song.flow-=0.1
+	                obj_song.misses+=1
+	                obj_song.coolscore-=50
+					if(combo > highCombo)
+						highCombo = combo
+					combo = 0
+	                press=true
+	                frame=0
+	                sprite_index=anim[(n+8)]
+	                //sound
+	                randomize();
+	                var ow = audio_play_sound(snd_owch,9999,false)
+	                var pitch = 0.6 + random(0.8)
+	                audio_sound_pitch(ow,pitch)
+	            }
+	        }
+			
+			if(obj_stats.botplay)
+			{
+				if hit[n] == true 
+				{
+					hit[n]=false
+		            press=true
+		            frame=0
+					combo++
+		            sprite_index=anim[n]
+				}
+			}
+		}
 //animations
     if (frame<image_number+10 && press=true) {
         if sprite_index=ayy {
             frame+=12/1000000*delta_time
         } else {
-            frame+=framerate * global.delta_multiplier
+            frame+=framerate// * global.delta_multiplier
         }
     } else {
         press=false

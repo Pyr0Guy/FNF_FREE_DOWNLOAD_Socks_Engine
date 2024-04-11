@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_dsflop",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":3,
+  "conversionMode":0,
+  "duration":3.16517,
+  "name":"snd_dsflop",
+  "parent":{
+    "name":"soundeffects",
+    "path":"folders/Sounds/soundeffects.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_dsflop",
+  "type":0,
+  "volume":1.0,
+}

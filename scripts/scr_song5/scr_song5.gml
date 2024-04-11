@@ -341,18 +341,17 @@ function scr_song5(){
             draw_sprite_ext(sprite[type],frame,x,y+5,image_xscale,image_yscale,0,c_black,obj_song.mmmm)
         }
         with(obj_player) {
-            image_alpha=0
-            scr_skinswapdude(c_white)
-                draw_sprite(sprite_index,image_index,x,y)
-            shader_reset();
-            scr_skinswapdude(c_black)
-                draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,obj_song.mmmm)
-                draw_sprite_ext(sprite_index,image_index,x,y+5,1,1,0,c_white,obj_song.mmmm)
-            shader_reset();
-            scr_highlight(make_color_rgb(32,30,40),c_white)
-                draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,obj_song.mmmm)
-            shader_reset();
-        }
+		    image_alpha=0
+		    scr_shadercheck(shader_colorswap,c_white)
+		        draw_sprite(sprite_index,image_index,x,y)
+		    shader_reset();
+		    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_black,obj_song.mmmm)
+		    draw_sprite_ext(sprite_index,image_index,x,y+5,1,1,0,c_black,obj_song.mmmm)
+		    if scr_shadercheck(sh_highlight,make_color_rgb(32,30,40),c_white) {
+		        draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,obj_song.mmmm)
+		    shader_reset();
+		    }
+		}
         with(obj_badguy) {
             image_alpha=0
             draw_sprite(sprite_index,image_index,x,y)
@@ -360,64 +359,59 @@ function scr_song5(){
             draw_sprite_ext(sprite_index,image_index,x,y+5,1,1,0,c_black,obj_song.mmmm)
         }
         //anime
-        switch(event) {
-            case 30: //fade in
-                mm+=0.02
-                draw_sprite_ext(spr_whitepixel,0,0,0,room_width,room_height,0,c_white,mm)
-                draw_sprite_ext(spr_blackpixel,0,0,(obj_camera.y)+200,800,-50,0,c_black,mm)
-                draw_sprite_ext(spr_blackpixel,0,0,(obj_camera.y)-200,800,50,0,c_black,mm)
-            break;
-            case 31: //buddy anime
-                mm+=0.02
-                if paused=false {
-                    mmmmmmm+=0.005
-                }
-                mmmmmmm=clamp(mmmmmmm,0,1)
-                draw_sprite_ext(spr_whitepixel,0,0,0,room_width,room_height,0,c_white,mm)
-                draw_sprite_ext(obj_badguy.sprite_index,obj_badguy.image_index,(obj_camera.x+62)+(mmmmmmm*4),(obj_camera.y)+200,1,1,0,c_white,mmmmmmm*2)
-                var l;
-                for(l=2;l<=7;l++) {
-                    if obj_badguy.sprite_index=obj_badguy.anim[l] {
-                        draw_sprite_ext(spr_earth,current_time/200,(obj_camera.x-75)+(mmmmmmm*4),obj_camera.y-82,6,6,0,c_white,mmmmmmm*2)
+        if event>=30 && event<=33 {
+            if paused=false {
+                mm+=0.005
+                if mmm!=1 && event!=33 {
+                    mmmmmmm+=0.02
+                    if event=32 {
+                        mmm+=0.02
+                    }
+                    //clamps
+                    mmmmmmm=clamp(mmmmmmm,0,1)
+                } else {
+                    mmmmmmm=0
+                    if event=33 {
+                        mmm-=0.02
                     }
                 }
-                draw_sprite_ext(spr_blackpixel,0,0,(obj_camera.y)+200,800,-50,0,c_black,mm)
-                draw_sprite_ext(spr_blackpixel,0,0,(obj_camera.y)-200,800,50,0,c_black,mm)
-            break;
-            case 32: //dude anime
-                mm+=0.02
-                if paused=false {
-                    mmmmmmm+=0.005
-                    mmm+=0.005
-                }
-                mmmmmmm=clamp(mmmmmmm,0,1)
-                mmm=clamp(mmm,0,1)
-                mm=clamp(mm,0,1)
-                draw_sprite_ext(spr_whitepixel,0,0,0,room_width,room_height,0,c_white,mm)
-                draw_sprite_ext(obj_badguy.sprite_index,obj_badguy.image_index,(obj_camera.x+62)+(mmmmmmm*4),(obj_camera.y)+200,1,1,0,c_white,(mmmmmmm*4)-(mmm*16))
-                draw_sprite_ext(spr_animelady,current_time/200,(obj_camera.x+62)-(mmm*4),(obj_camera.y),1,1,0,c_white,mmm*4)
-                scr_skinswapdude(c_white)
-                    draw_sprite_ext(obj_player.sprite_index,obj_player.image_index,(obj_camera.x-100)-(mmm*4),obj_camera.y+160,1,1,0,c_white,mmm*4)
-                shader_reset();
-                draw_sprite_ext(spr_blackpixel,0,0,(obj_camera.y)+200,800,-50,0,c_black,mm)
-                draw_sprite_ext(spr_blackpixel,0,0,(obj_camera.y)-200,800,50,0,c_black,mm)
-            break;
-            case 33: //now go away
-                mm-=0.02
-                mmm=0
-                if paused=false {
-                    mmmmmmm+=0.005
-                }
-                mmmmmmm=clamp(mmmmmmm,0,1)
-                draw_sprite_ext(spr_whitepixel,0,0,0,room_width,room_height,0,c_white,mm)
-                draw_sprite_ext(spr_animelady,current_time/200,(obj_camera.x+62)-(mmmmmmm*4),(obj_camera.y),1,1,0,c_white,mm)
-                scr_skinswapdude(c_white)
-                    draw_sprite_ext(spr_dude3idle,obj_player.image_index,(obj_camera.x-100)-(mmmmmmm*4),obj_camera.y+160,1,1,0,c_white,mm)
-                shader_reset();
-                draw_sprite_ext(spr_blackpixel,0,0,(obj_camera.y)+200,800,-50,0,c_black,mm)
-                draw_sprite_ext(spr_blackpixel,0,0,(obj_camera.y)-200,800,50,0,c_black,mm)
-            break;
+            }
+            //buddy
+            if surface_exists(buddyasurf) {
+                surface_set_target(buddyasurf)
+                    draw_sprite_ext(spr_whitepixel,0,0,0,room_width,room_height,0,c_white,1)
+                    draw_sprite_ext(buddyanime.sprite_index,buddyanime.image_index,262+(mm*4),400,1,1,0,c_white,1)
+                    var l;
+                    for(l=2;l<=7;l++) {
+                        if buddyanime.sprite_index=buddyanime.anim[l] {
+                            draw_sprite_ext(spr_earth,current_time/200,125+(mm*4),118,6,6,0,c_white,1)
+                        }
+                    }
+                    draw_sprite_ext(spr_blackpixel,0,0,400,800,-50,0,c_black,1)
+                    draw_sprite_ext(spr_blackpixel,0,0,0,800,50,0,c_black,1)
+                surface_reset_target();
+                draw_surface_ext(buddyasurf,obj_camera.x-200,obj_camera.y-200,1,1,0,c_white,mmmmmmm)
+            } else {
+                buddyasurf=surface_create(400,400)
+            }
+            //dude
+            if surface_exists(dudeasurf) {
+                surface_set_target(dudeasurf)
+                    draw_clear_alpha(c_black,0)
+                    draw_sprite_ext(spr_whitepixel,0,0,0,room_width,room_height,0,c_white,1)
+                    draw_sprite_ext(spr_animelady,0,262-(mm*4),200,1,1,0,c_white,1)
+                    scr_shadercheck(shader_colorswap,c_white)
+                        draw_sprite_ext(dudeanime.sprite_index,dudeanime.image_index,100-mm*4,360,1,1,0,c_white,1)
+                    shader_reset();
+                    draw_sprite_ext(spr_blackpixel,0,0,400,800,-50,0,c_black,1)
+                    draw_sprite_ext(spr_blackpixel,0,0,0,800,50,0,c_black,1)
+                surface_reset_target();
+                draw_surface_ext(dudeasurf,obj_camera.x-200,obj_camera.y-200,1,1,0,c_white,mmm)
+            } else {
+                dudeasurf=surface_create(400,400)
+            } 
         }
+
         //m   mm    mmmmmmmmmmmmmmmmmmmmm
         //THE COOL PART STARTS AT 30 AND 31
         

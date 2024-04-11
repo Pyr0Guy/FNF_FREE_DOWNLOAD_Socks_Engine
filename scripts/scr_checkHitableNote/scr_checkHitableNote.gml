@@ -19,12 +19,11 @@ function scr_checkHitableNote()
 			}
 		}
 	}
-	
 	return true;
 }
 
-/* OLD CODE IF I NEEDED
-
+//OLD CODE IF I NEEDED
+/*
 if place_meeting(x,y+_flip,obj_note) && obj_song.songpos>0 {
     if !obj_stats.downscroll {
         var noteabove = -1
@@ -32,14 +31,14 @@ if place_meeting(x,y+_flip,obj_note) && obj_song.songpos>0 {
         if instance_exists(noteabove) {
             if (noteabove.y>=obj_uinotes.y-(32*obj_song.notespeed)) && (noteabove.type=1 || noteabove.type=2 || noteabove.type=3 || noteabove.type=8 || noteabove.type=9) {
                 hitable=false;
-                //image_blend=c_red
+                image_blend=c_red
             } else {
                 hitable=true;
-                //image_blend=c_white
+                image_blend=c_white
             }
         } else {
             hitable=true;
-            //image_blend=c_white
+            image_blend=c_white
         }
     } else {
         var noteabove = -1
@@ -47,18 +46,18 @@ if place_meeting(x,y+_flip,obj_note) && obj_song.songpos>0 {
         if instance_exists(noteabove) {
             if (noteabove.y<=obj_uinotes.y+(32*obj_song.notespeed)) && (noteabove.type=1 || noteabove.type=2 || noteabove.type=3 || noteabove.type=8 || noteabove.type=9) {
                 hitable=false;
-                //image_blend=c_red
+                image_blend=c_red
             } else {
                 hitable=true;
-                //image_blend=c_white
+                image_blend=c_white
             }
         } else {
             hitable=true;
-            //image_blend=c_white
+            image_blend=c_white
         }
     }
 } else {
     hitable=true;
-    //image_blend=c_white
+    image_blend=c_white
 }
 */

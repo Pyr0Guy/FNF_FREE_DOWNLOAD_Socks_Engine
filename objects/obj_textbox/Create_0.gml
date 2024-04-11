@@ -9,10 +9,26 @@ textmax=0
 //voices
 vsound=snd_dudetalk
 //vars beside text
+textboxsurf=surface_create(400,400);
 text=1
 i=0
-ii=9
+ii=0
+inerf=0
 textx=12
 talkdude=0
+pause=false
+waiting=false
+waitgoal=0
+waitt=0
+stayvisable=false //stay visable when paused
+update=true
+pu=true //if unpause updates stuff
+//actions
+aindex=0
+//song vars
+var m;
+for(m=mus_birthdayboy;m<snd_3;m++) {
+    song[m]=0
+}
 scr_textboxcoloring();
 

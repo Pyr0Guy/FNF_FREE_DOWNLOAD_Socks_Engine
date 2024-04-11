@@ -75,7 +75,6 @@ alarm[1]=50
 alarm[2]=80
 alarm[3]=110
 alarm[4]=150
-scr_songint(obj_stats.weekgoing);
 spacey=48
 surfaceh=true
 //ploopy!
@@ -87,3 +86,20 @@ category = 0
 offHud = false
 
 pitch = 1;
+
+wavey=false
+waveint=0
+wavedude=false
+
+spr_screenborder=-1
+ui=surface_create(400,400)
+hideui=false
+
+notesurf=surface_create(800,800)
+
+ntscsurface=-1
+squigliness_invert_value=1
+
+volume = 1;
+
+scr_songint(obj_stats.weekgoing);

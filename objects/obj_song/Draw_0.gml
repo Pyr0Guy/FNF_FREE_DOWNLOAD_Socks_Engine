@@ -7,6 +7,5 @@ var _script = asset_get_index("scr_song" + string_replace(string(obj_stats.weekg
 //Launch it
 if(script_exists(_script))
 	script_execute(_script)
-
 /* */
 /*  */

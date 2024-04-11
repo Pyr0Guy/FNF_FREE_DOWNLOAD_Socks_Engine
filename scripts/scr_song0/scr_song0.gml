@@ -11,30 +11,30 @@ function scr_song0(){
 		//obj_noteFlash.sprite = spr_uinotesFlashGaw
         //ui
         //health bar
-        obj_song.houtline=c_white
-        obj_song.hplayer=c_black
-        obj_song.hbaddie=c_black
+        houtline=c_white
+        hplayer=c_black
+        hbaddie=c_black
         //flow
-        obj_song.foutline=c_white
-        obj_song.fback=c_black
-        obj_song.ffull=c_white
+        foutline=c_white
+        fback=c_black
+        ffull=c_white
         //icons
-        obj_song.baddieicon=spr_stradicongaw
-        obj_song.playericon=spr_dudeicongaw
+        baddieicon=spr_stradicongaw
+        playericon=spr_dudeicongaw
         //text color
-        obj_song.tcolor=c_black
-        obj_song.toutline=c_white
+        tcolor=c_black
+        toutline=c_white
         //guys
-        with(obj_tutorialguys) {
-            image_alpha=0
-            scr_skinswapdude(c_white)
-                draw_sprite(sprite_index,image_index,x,y)
-                draw_set_blend_mode(bm_max)
-                draw_sprite(sprite_index,image_index,x,y)
-                draw_set_blend_mode(bm_normal)
-            shader_reset();
-            draw_sprite(spr_tutorialbglight,0,x,y)
-        }
+       with(obj_tutorialguys) {
+       image_alpha=0
+	       scr_shadercheck(shader_colorswap,c_white)
+	           draw_sprite(sprite_index,image_index,x,y)
+	           draw_set_blend_mode(bm_max)
+	           draw_sprite(sprite_index,image_index,x,y)
+	           draw_set_blend_mode(bm_normal)
+	       shader_reset();
+	       draw_sprite(spr_tutorialbglight,0,x,y)
+       }
         with(obj_player) {
             image_alpha=0
             draw_sprite(sprite_index,image_index,x,y)

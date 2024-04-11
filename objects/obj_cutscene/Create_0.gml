@@ -1,54 +1,32 @@
-//setting sprites
-switch(obj_stats.cutgoing) {
-    case 0: //tutorial
-        alarm[0]=30
-        sprite_draw=spr_tutcutscene
+sprite_draw=spr_w0s1dialog1 //what sprite is used as the bg
+image_draw=0 //what image index the cutscene is on
+var fadein=true //if there is a fadein to the cutscene
+var cg=obj_stats.cutgoing
+var cground=round(cg)
+var what=cg-cground
+switch(what) {
+    case 0:
+        var song=1;
+        var count=1;
     break;
-    case 1: //summer
-        alarm[0]=1
-        sprite_draw=spr_sumcutscene1
+    case 0.1:
+        var song=2;
+        var count=1;
     break;
-    case 1.1: //summer to stars
-        alarm[0]=1
-        sprite_draw=spr_sumcutscene2
-    break;
-    case 1.2: //stars
-        alarm[0]=1
-        sprite_draw=spr_starscutscene1
-    break;
-    case 2: //girl next door
-        alarm[0]=50
-        instance_create(0,0,obj_fadein)
-        sprite_draw=spr_gndcutscene1
-    break;
-    case 2.1: //gnd to gamejack
-        alarm[0]=1
-        sprite_draw=spr_gndcutscene2
-    break;
-    case 2.2: //gamejack
-        alarm[0]=1
-        sprite_draw=spr_gjcutscene1
-    break;
-    case 3: //twinkle
-        alarm[0]=50
-        instance_create(0,0,obj_fadein)
-        sprite_draw=spr_twicutscene1
-    break;
-    case 3.1: //twinkle 2
-        alarm[0]=25
-        instance_create(0,0,obj_fadein)
-        sprite_draw=spr_twicutscene2
-    break;
-    case 3.2: //tsunami
-        alarm[0]=1
-        instance_create(0,0,obj_fadein)
-        sprite_draw=spr_tsucutscene1
+    case 0.2:
+        var song=2;
+        var count=2;
     break;
     default:
-        //what
-        sprite_draw=spr_tutcutscene
-        alarm[0]=9
+        var song=1;
+        var count=1;
     break;
 }
-turn=0
-image_draw=0
+var asset=string(obj_stats.weekndgoing)+string("s")+string(song)+string("dialog")+string(count);
+var cutbox=asset_get_index(string("obj_w")+asset)
+trace(string("obj_w")+asset)
+sprite_draw=asset_get_index(string("spr_w")+asset)
+//do the stuff
+if fadein instance_create_depth(0,0,-99999,obj_fadein);
+instance_create_depth(0,0,-99999,cutbox)
+

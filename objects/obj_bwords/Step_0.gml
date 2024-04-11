@@ -34,7 +34,8 @@ switch(tick){
     break;
 }
 //skip
-if keyboard_check_pressed(vk_enter) or keyboard_check_pressed(ord("Z")) or gamepad_button_check_pressed(0,gp_face1) {
+if scr_multiCheckButtonPressed(ord("Z"),vk_enter, gp_face1)
+{
     instance_destroy(obj_midi_clock)
     audio_play_sound(snd_ha,9999,false)
     audio_stop_sound(snd_whehehe)

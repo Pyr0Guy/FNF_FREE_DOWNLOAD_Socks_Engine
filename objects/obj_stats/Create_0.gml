@@ -7,8 +7,13 @@ readable=false
 skin=0
 in_game_fps = 60;
 
+globalvar deltatime;
+deltatime=room_speed/1000000*delta_time;
+
 volume=1
 //4 key
+
+globalvar bind;
 bind[0]=37 //right
 bind[1]=40 //up
 bind[2]=38 //down
@@ -27,9 +32,29 @@ bind[7]=gp_face2 //left
 //bind[13]=ord("K")
 
 //scores
-mini=-4 //how far negative the songlist goes
-maxi=7 //how many songs are there
+//mini=-4 //how far negative the songlist goes
+//maxi=7 //how many songs are there
 
+songscore		= ds_map_create()
+songmiss		= ds_map_create()
+songaccuracy	= ds_map_create()
+songlocked		= ds_map_create()
+songnew			= ds_map_create()
+
+what_i_need_to_save = [] //Dynamicly saving staff
+namesong = ""
+locked_songs =	[ //Still thinks about best solution for locking songs
+				"infographic",  
+				"channelsurfing & nermal", 
+				"break it down triangle man",
+				"cinemassacre"
+]
+
+for(var lock = 0; lock < array_length(locked_songs); lock++)
+	songlocked[? locked_songs[lock]] = true; 
+
+
+/*
 //categories
 cat[0]=4
 cat[1]=3
@@ -53,40 +78,11 @@ for(var b=0; b<array_length(cat); b++)
 songlocked[0][1]=true //locking break it down triangle man
 songlocked[0][2]=true //locking channelsurfing & nermal
 songlocked[0][3]=true //locking infographic
-songlocked[0][4]=true //locking dreams
-
-/*		Save without categoryes
-var s;
-	for (s=0;s<(maxi-mini);s++) {
-	    songscore[s]=0
-	    songmiss[s]=0
-		songaccuracy[s]=0
-	    songlocked[0][s]=false
-	    songnew[s]=false
-	}
-
-songlocked[1]=true //locking break it down triangle man
-songlocked[2]=true //locking channelsurfing & nermal
-songlocked[3]=true //locking infographic
 */
 
-
-/*
-mini=-4 //how far negative the songlist goes
-maxi=7 //how many songs are there
-var s;
-var b;
-for (b=0;b<1;b++) {
-    for (s=0;s<(maxi-mini);s++) {
-        songscore[b,s]=0
-        songmiss[b,s]=0
-        songlocked[b,s]=false
-        songnew[b,s]=false
-    }
-}
-*/
-
-weekgoing=1 // week you're going to
+weeknd_songs = [] //Temp var for story mode
+weekgoing=1.2 // song you're going to
+weekndgoing=1 //weeknd you're going to
 cutgoing=3.2 // cutscene you're going to
 joshmode=false
 freeplay=false //are you playing a song in freeplay or storymode
@@ -105,6 +101,7 @@ category = 0 //In wich category in freeplay you go
 select = 0 //Wich song you choose
 scr_loadoptions();
 //create lady's font
+globalvar fnt_lady;
 fnt_lady = font_add_sprite_ext(spr_ladyfont," qwertyuiopasdfghjklzxcvbnm",false,0)
 
 /* */
@@ -146,6 +143,16 @@ songFile = mus_w3s2
 bpm = 140
 songName = "";
 
+globalvar shaderbroke;
+globalvar shaderdisabled;
+if shaders_are_supported() && shader_is_compiled(sh_ntsc) {
+    shaderbroke=false
+    shaderdisabled=false
+} else {
+    shaderbroke=true
+    shaderdisabled=true
+}
+
 //Engine fun
 funnyNotePos = false
 randomize()
@@ -160,3 +167,11 @@ global.custom_audio_filenames = 0;
 reg_fps = 1/60
 global.actual_delta = delta_time/1000000;
 global.delta_multiplier = global.actual_delta/reg_fps;
+
+//Sel position for all rooms
+selectedWord		= 0
+storyModeSel		= 0
+freeplayCategoryes	= 1
+freeplayPosition	= 0
+
+trace(window_get_width(), window_get_height());

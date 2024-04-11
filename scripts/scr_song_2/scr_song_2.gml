@@ -1,5 +1,8 @@
 //Channelsurf
 function scr_song_2(){
+	var slickvisor=make_color_rgb(162,238,188)
+    var slickears=make_color_rgb(123,186,193)
+	
 	if instance_exists(obj_note) {
             obj_note.bombhit=false
             if obj_note.type=3 {
@@ -35,8 +38,8 @@ function scr_song_2(){
                 var blue=make_color_rgb(115,223,242);
                 //var redshadow=make_color_rgb(89,0,51);
                 //var blueshadow=make_color_rgb(4,0,74);
-                obj_song.mmm+=((obj_song.mm-obj_song.mmm)/180) * global.delta_multiplier
-                obj_song.mmmm+=((obj_song.alph-obj_song.mmmm)/90) * global.delta_multiplier
+                obj_song.mmm+=((obj_song.mm-obj_song.mmm)/180)
+                obj_song.mmmm+=((obj_song.alph-obj_song.mmmm)/90)
                 var colorsky=merge_color(red,blue,obj_song.mmm)
                 //var colorshadow=merge_color(redshadow,blueshadow,mmm)
                 var shade=obj_song.mmmm
@@ -58,8 +61,8 @@ function scr_song_2(){
                 var coolcolor=make_color_rgb(183,224,251);
                 var coolcolor2=make_color_rgb(120,164,228);
                 if obj_song.paused=false {
-                    obj_song.m+=0.02 * global.delta_multiplier
-                    obj_song.mm+=0.0005 * global.delta_multiplier
+                    obj_song.m+=0.02
+                    obj_song.mm+=0.0005
                 }
                 draw_rectangle_colour(0,0,400,400,coolcolor,coolcolor,coolcolor2,coolcolor2,false)
                 draw_sprite_ext(obj_player.sprite_index,obj_player.image_index,obj_player.x,obj_player.y-20,1,1,0,c_black,1)
@@ -71,10 +74,10 @@ function scr_song_2(){
                 var coolcolor=make_color_rgb(183,224,251);
                 var coolcolor2=make_color_rgb(120,164,228);
                 if obj_song.paused=false {
-                    obj_song.m+=0.02 * global.delta_multiplier
-                    obj_song.mm+=0.0005 * global.delta_multiplier
-                    obj_song.mmm+=0.02 * global.delta_multiplier
-                    obj_song.mmmm+=0.0005 * global.delta_multiplier
+                    obj_song.m+=0.02
+                    obj_song.mm+=0.0005
+                    obj_song.mmm+=0.02
+                    obj_song.mmmm+=0.0005
                 }
                 draw_rectangle_colour(0,0,400,400,coolcolor,coolcolor,coolcolor2,coolcolor2,false)
                 draw_sprite_ext(obj_player.sprite_index,obj_player.image_index,obj_player.x,obj_player.y-20,1,1,0,c_black,1)
@@ -138,23 +141,27 @@ function scr_song_2(){
                                 var screened=1
                             }
                             draw_sprite(spr_cstvscreen,0+screened,x,y)
-                            obj_song.mmmmmm-=0.5 * global.delta_multiplier
+                            obj_song.mmmmmm-=0.5
                         break;
                     }
                     draw_sprite(sprite_index,1,x,y)
                 }
-                with(obj_player) {
-                    image_alpha=0
-                    scr_skinswapdude(c_white)
-                        draw_sprite(sprite_index,image_index,x,y)
-                    shader_reset();
-                    scr_skinswapdude(colorsky);
-                        draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,0.65)
-                    shader_reset();
-                    //scr_silhouette(colorshadow);
-                    //    draw_sprite_ext(sprite_index,image_index,x+4,y+4,1,1,0,c_white,shade)
-                    //shader_reset();
-                    draw_sprite_ext(sprite_index,image_index,x+4,y+4,1,1,0,c_black,shade)
+                with(obj_player) 
+				{
+	                image_alpha=0
+	                if scr_shadercheck(shader_colorswap,c_white) {
+		                draw_sprite(sprite_index,image_index,x,y)
+		                shader_reset();
+		                scr_skinswapdude(colorsky)
+		                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,0.65)
+		                shader_reset();
+					} 
+					else 
+					{
+						draw_sprite(sprite_index,image_index,x,y)
+						draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,colorsky,0.65)
+					}
+					draw_sprite_ext(sprite_index,image_index,x+4,y+4,1,1,0,c_black,shade)
                 }
                 with(obj_badguy) {
                     image_alpha=0
@@ -163,12 +170,14 @@ function scr_song_2(){
                     draw_sprite_ext(sprite_index,image_index,x-4,y+4,1,1,0,c_black,shade)
                     //highlights
                     //draw_set_blend_mode(bm_add)
-                    scr_highlight(make_color_rgb(162,238,188),make_color_rgb(162,238,188))
+                    if scr_shadercheck(sh_highlight,slickvisor,slickvisor) {
                         draw_sprite(sprite_index,image_index,x,y)
-                    shader_reset();
-                    scr_highlight(make_color_rgb(123,186,193),make_color_rgb(123,186,193))
+                        shader_reset();
+                    }
+                    if scr_shadercheck(sh_highlight,slickears,slickears) {
                         draw_sprite(sprite_index,image_index,x,y)
-                    shader_reset();
+                        shader_reset();
+                    }
                     //draw_set_blend_mode(bm_normal)
                 }
                 if instance_exists(obj_nermal) {
@@ -211,26 +220,31 @@ function scr_song_2(){
                         draw_sprite_ext(sprite_index,image_index,obj_camera.x+192-(obj_song.mmmmmmm),obj_camera.y+8,1,1,0,c_black,shade)
                     }
                     with(obj_player) {
-                        image_alpha=0
-                        scr_skinswapdude(c_white)
-                            draw_sprite(sprite_index,image_index,x,y)
-                        shader_reset();
-                        scr_skinswapdude(colorsky);
-                            draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,0.65)
-                        shader_reset();
-                        draw_sprite_ext(sprite_index,image_index,x+8,y+8,1,1,0,c_black,shade) 
-                    }
+	                    image_alpha=0
+	                    if scr_shadercheck(shader_colorswap,c_white) {
+	                        draw_sprite(sprite_index,image_index,x,y)
+	                        shader_reset();
+	                        scr_skinswapdude(colorsky);
+	                            draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,0.65)
+	                        shader_reset();
+	                    } else {
+	                        draw_sprite(sprite_index,image_index,x,y)
+	                        draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,colorsky,0.65)
+	                    }
+							draw_sprite_ext(sprite_index,image_index,x+8,y+8,1,1,0,c_black,shade) 
+	                    }
                     with(obj_badguy) {
                         image_alpha=0
                         draw_sprite(sprite_index,image_index,x,y)
                         draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,colorsky,0.8)
                         draw_sprite_ext(sprite_index,image_index,x-8,y+8,1,1,0,c_black,shade)
-                        scr_highlight(make_color_rgb(162,238,188),make_color_rgb(162,238,188))
+                        if scr_shadercheck(sh_highlight,slickvisor,slickvisor) {
                             draw_sprite(sprite_index,image_index,x,y)
-                        shader_reset();
-                        scr_highlight(make_color_rgb(123,186,193),make_color_rgb(123,186,193))
-                            draw_sprite(sprite_index,image_index,x,y)
-                        shader_reset();
+                            shader_reset();
+                            scr_highlight(slickears,slickears)
+                                draw_sprite(sprite_index,image_index,x,y)
+                            shader_reset()
+                        }
                         //draw_set_blend_mode(bm_normal)
                     }
                     draw_sprite_ext(spr_blackpixel,0,0,350,400,400,0,c_black,1)
@@ -253,16 +267,17 @@ function scr_song_2(){
                     draw_sprite_ext(spr_slickcutsceneb,((tempvent div 12)*2)+1,obj_camera.x,obj_camera.y,2,2,0,c_white,1)
                     //characters
                     if tempvent<12 {
+                    draw_sprite_ext(spr_slickcutscene,tempvent,obj_camera.x,obj_camera.y,2,2,0,c_white,1)
+                    draw_sprite_ext(spr_slickcutscene,tempvent,obj_camera.x,obj_camera.y,2,2,0,colorsky,0.8)
+                    draw_sprite_ext(spr_slickcutscene,tempvent,obj_camera.x-8,obj_camera.y+8,2,2,0,c_black,shade)
+                    if scr_shadercheck(sh_highlight,make_color_rgb(162,238,188),make_color_rgb(162,238,188)) {
                         draw_sprite_ext(spr_slickcutscene,tempvent,obj_camera.x,obj_camera.y,2,2,0,c_white,1)
-                        draw_sprite_ext(spr_slickcutscene,tempvent,obj_camera.x,obj_camera.y,2,2,0,colorsky,0.8)
-                        draw_sprite_ext(spr_slickcutscene,tempvent,obj_camera.x-8,obj_camera.y+8,2,2,0,c_black,shade)
-                        scr_highlight(make_color_rgb(162,238,188),make_color_rgb(162,238,188))
-                            draw_sprite_ext(spr_slickcutscene,tempvent,obj_camera.x,obj_camera.y,2,2,0,c_white,1)
                         shader_reset();
                         scr_highlight(make_color_rgb(123,186,193),make_color_rgb(123,186,193))
                             draw_sprite_ext(spr_slickcutscene,tempvent,obj_camera.x,obj_camera.y,2,2,0,c_white,1)
                         shader_reset();
-                    } else {
+						} 
+					}else {
                         //background
                         draw_sprite_ext(spr_slickcutscene,12,obj_camera.x,obj_camera.y,2,2,0,c_white,1)
                         draw_sprite_ext(spr_slickcutscene,12,obj_camera.x,obj_camera.y,2,2,0,colorsky,0.8)
@@ -275,15 +290,17 @@ function scr_song_2(){
                             draw_sprite_ext(spr_slickcutscened,1,obj_camera.x-2+poob,obj_camera.y-2+poob,2,2,0,colorsky,0.8)
                             draw_sprite_ext(spr_slickcutscened,1,obj_camera.x+(-2+poob)+8,obj_camera.y+(-2+poob)+8,2,2,0,c_black,shade)
                         } else {
-                            scr_skinswapdude(c_white)
-                                draw_sprite_ext(spr_slickcutscened,0,obj_camera.x,obj_camera.y,2,2,0,c_white,1)
-                            shader_reset();
-                            scr_skinswapdude(colorsky)
-                                draw_sprite_ext(spr_slickcutscened,0,obj_camera.x,obj_camera.y,2,2,0,c_white,0.8)
-                            shader_reset();
-                            scr_skinswapdude(c_black);
-                                draw_sprite_ext(spr_slickcutscened,0,obj_camera.x+8,obj_camera.y+8,2,2,0,c_white,shade)
-                            shader_reset();
+                            if scr_shadercheck(shader_colorswap,c_white) {
+								draw_sprite_ext(spr_slickcutscened,0,obj_camera.x,obj_camera.y,2,2,0,c_white,1)
+								shader_reset();
+								scr_skinswapdude(colorsky)
+								draw_sprite_ext(spr_slickcutscened,0,obj_camera.x,obj_camera.y,2,2,0,c_white,0.8)
+								shader_reset();
+								} else {
+								    draw_sprite_ext(spr_slickcutscened,0,obj_camera.x,obj_camera.y,2,2,0,c_white,1)
+								    draw_sprite_ext(spr_slickcutscened,0,obj_camera.x,obj_camera.y,2,2,0,colorsky,0.8)
+								}
+								draw_sprite_ext(spr_slickcutscened,0,obj_camera.x+8,obj_camera.y+8,2,2,0,c_black,shade)
                         }
                     
                     }

@@ -22,8 +22,13 @@ if keyboard_check(vk_alt) && keyboard_check_pressed(vk_enter) {
     audio_play_sound(snd_weirdnoise,9999,false)
 }
 //debug
-if keyboard_check_pressed(ord("7")) {
+if keyboard_check_pressed(vk_f7) {
     debug=!debug
+}
+if debug=true {
+    if keyboard_check_pressed(vk_f8) {
+        shaderdisabled=!shaderdisabled
+    }
 }
 
 //DELTA UPDATE, fuck the framerate

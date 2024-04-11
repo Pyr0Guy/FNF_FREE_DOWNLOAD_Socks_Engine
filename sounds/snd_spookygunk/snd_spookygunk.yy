@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_spookygunk",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":3,
+  "conversionMode":0,
+  "duration":12.607143,
+  "name":"snd_spookygunk",
+  "parent":{
+    "name":"soundeffects",
+    "path":"folders/Sounds/soundeffects.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_spookygunk",
+  "type":0,
+  "volume":1.0,
+}

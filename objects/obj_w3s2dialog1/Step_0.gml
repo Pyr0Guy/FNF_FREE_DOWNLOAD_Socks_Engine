@@ -1,151 +1,51 @@
-/// @description set cutscene sprites
-if pause=false {
 action_inherited();
-if instance_exists(obj_cutscene) {
+///set cutscene sprites
+if scr_textcheck() {
     //general updating
     switch(text) {
         case 1:
-            obj_cutscene.image_draw=0
-            if !audio_is_playing(mus_bbbb) {
-                var scary = audio_play_sound(mus_bbbb,9999,true)
-                audio_sound_pitch(scary,0.55)
-            }
+            scr_nextframe(0)
+            scr_playsong(mus_cats,0.125)
         break;
-        case 2:
-            obj_cutscene.image_draw=1
+        case 2: scr_nextframe(1) break;
+        case 4: scr_nextframe(2) break;
+        case 6: scr_nextframe(3) break;
+        case 7: scr_nextframe(2) break;
+        case 12: scr_nextframe(4) break;
+        case 14:
+            scr_nextframe(5)
+            audio_pause_sound(song[mus_cats])
         break;
-        case 3:
-            //obj_cutscene.image_draw=2
+        case 15: scr_nextframe(6) break;
+        case 16: 
+            scr_nextframe(4)
+            audio_resume_sound(song[mus_cats])
         break;
-        case 4:
-            obj_cutscene.image_draw=3
+        case 22: scr_nextframe(7) break;
+        case 36:
+            scr_nextframe(8)
+            scr_stopsong(mus_cats,0.125)
+            scr_playsong(mus_mysweetheart,0.125)
         break;
-        case 8:
-            obj_cutscene.image_draw=4
-            audio_stop_sound(mus_bbbb)
-        break;
-        case 9:
-            obj_cutscene.image_blend=c_black
-            audio_play_sound(snd_cdboydeath,9999,false)
-            pause=true
-            alarm[0]=80
-        break;
-        case 10:
-        break;
-        case 11:
-            if !audio_is_playing(mus_kindaAbadass) {
-                audio_play_sound(mus_kindaAbadass,9999,true)
-            }
-        break;
-        case 16:
-            obj_cutscene.image_draw=7
-        break;
-        case 18:
-            //obj_cutscene.image_draw=8
-        break;
-        case 19:
-            if i=ii {
-                text+=1
-                i=0
-            }
-        break;
-        case 20:
-            obj_cutscene.image_draw=9
-            audio_stop_sound(mus_kindaAbadass)
-            if !audio_is_playing(mus_bozo) {
-                audio_play_sound(mus_bozo,9999,true)
-            }
-        break;
-        case 23:
-            //obj_cutscene.image_draw=10
-            audio_pause_sound(mus_bozo)
-        break;
-        case 24:
-            obj_cutscene.image_draw=11
-            audio_resume_sound(mus_bozo)
-        break;
-        case 32:
-            obj_cutscene.image_draw=12
-            audio_stop_sound(mus_bozo)
-        break;
-        case 33:
-            obj_cutscene.image_draw=13
-        break;
-        case 34:
-            obj_cutscene.image_draw=14
-            if !audio_is_playing(mus_birthdayboy) {
-                var dude = audio_play_sound(mus_birthdayboy,9999,true)
-                audio_sound_pitch(dude,2)
-            }
-        break;
-        case 35:
-            //obj_cutscene.image_draw=15
-        break;
-        case 37:
-            obj_cutscene.image_draw=16
-        break;
-        case 38:
-            obj_cutscene.image_draw=17
-            audio_sound_gain(mus_birthdayboy,0,1500)
-        break;
-        case 39:
-            audio_stop_sound(mus_birthdayboy)
-        break;
-        case 40:
-            obj_cutscene.image_draw=18
-        break;
-        case 41:
-            obj_cutscene.image_draw=19
-        break;
-        case 42:
-            obj_cutscene.image_draw=20
-        break;
-        case 44:
-            obj_cutscene.image_draw=21
-        break;
-        case 45:
-            if !audio_is_playing(mus_specialguest) {
-                var gunk = audio_play_sound(mus_specialguest,9999,true)
-                audio_sound_pitch(gunk,0.55)
-            }
-        break;
-        case 54:
-            audio_pause_sound(mus_specialguest)
-            audio_play_sound(snd_hoodie,9999,false)
-            obj_cutscene.image_blend=c_black
-            alarm[7]=35
+        case 39: scr_nextframe(9) break;
+        case 40: scr_nextframe(10) break;
+        case 45: scr_nextframe(11) break;
+        case 47: scr_nextframe(12) break;
+        case 59: scr_nextframe(13) break;
+        case 60: scr_playsong(mus_buddy,20) break;
+        case 70: scr_nextframe(14) break;
+        case 79:
+            scr_stopsong(mus_buddy,0)
+            scr_nextframe(15)
+            audio_play_sound(snd_doorslam2,9999,false)
+            alarm[3]=45
             pause=true
         break;
-        case 55:
-            obj_cutscene.image_draw=22
-            audio_resume_sound(mus_specialguest)
-            audio_sound_pitch(mus_specialguest,1)
-        break;
-        case 56:
-            if i=23 {
-                audio_pause_sound(mus_specialguest)
-                audio_play_sound(snd_gasp,9999,false)
-            }
-        break;
-        case 57:
-            audio_resume_sound(mus_specialguest)
-        break;
-        case 72:
-            if i=18 {
-                text++
-                i=0
-            }
-        break;
-        case 78:
-            obj_cutscene.image_draw=23
-            audio_stop_sound(mus_specialguest)
-        break;
-        case 87:
-            obj_cutscene.sprite_draw=spr_tutcutscene
-            obj_cutscene.image_draw=19
-        break;
+        case 81: scr_playsong(mus_bbbb,0) break;
+        case 82: scr_nextframe(18) break;
     }
-    //special updating
 }
+if text=55 && i>=100 {
+    scr_stopsong(mus_mysweetheart,0.125)
 }
 

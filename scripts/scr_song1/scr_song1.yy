@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_song1",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "songs",
-    "path": "folders/Scripts/songs.yy",
+  "$GMScript":"",
+  "%Name":"scr_song1",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_song1",
+  "parent":{
+    "name":"songs",
+    "path":"folders/Scripts/songs.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

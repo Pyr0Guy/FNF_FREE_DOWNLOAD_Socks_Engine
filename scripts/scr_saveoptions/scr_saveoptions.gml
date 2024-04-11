@@ -19,6 +19,25 @@ function scr_saveoptions() {
 	        ini_write_real("extra","playedw2",playedw2)
 	        ini_write_real("extra","seenpopup",seenpopup)
 	        ini_write_real("extra","bluedude",bluedude)
+			
+			ini_write_real("songs","how_many_song_do_i_save",array_length(what_i_need_to_save))
+			for(var coolName = 0; coolName < array_length(what_i_need_to_save); coolName++)
+			{
+				ini_write_string("songs","what_i_need_to_save-" + string(coolName) ,what_i_need_to_save[coolName])
+			}
+			
+			for(var coolName = 0; coolName < array_length(what_i_need_to_save); coolName++)
+			{
+				var _sName_ = what_i_need_to_save[coolName];
+				var _StrSName_ = string(_sName_);
+				trace(_StrSName_)
+				ini_write_real("scores", _StrSName_ + "-score"   , songscore[? _sName_])
+				ini_write_real("scores", _StrSName_ + "-misses"  , songmiss[? _sName_])
+				ini_write_real("scores", _StrSName_ + "-accuracy", songaccuracy[? _sName_])
+				ini_write_real("bonus",  _StrSName_ + "-locked"  , songlocked[? _sName_])
+				ini_write_real("bonus",  _StrSName_ + "-new"     , songnew[? _sName_])
+			}
+			/*
 	        for(var supercool=0; supercool<array_length(cat); supercool++)
 			{
 				for(var cool=0; cool<cat[supercool]; cool++)
@@ -30,6 +49,7 @@ function scr_saveoptions() {
 		            ini_write_real("bonus",string(supercool)+ "-" + string(cool)+string("_new"),songnew[supercool][cool])
 				}
 			}
+			*/
 	    }
 	ini_close();
 

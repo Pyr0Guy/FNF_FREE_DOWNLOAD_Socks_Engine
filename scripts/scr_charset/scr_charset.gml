@@ -29,10 +29,10 @@ function scr_charset(argument0, argument1) {
 	            anim[DOWNALT]=spr_ladymdown
 	            anim[UPALT]=spr_ladymup
 	            anim[RIGHTALT]=spr_ladymrightmiss
-	            anim[8]=spr_ladymupmiss
-	            anim[9]=spr_ladymdownmiss
-	            anim[10]=spr_ladymleftmiss
-	            anim[11]=spr_ladymrightmiss
+	            anim[LEFTMISS]=spr_ladymupmiss
+	            anim[DOWNMISS]=spr_ladymdownmiss
+	            anim[UPMISS]=spr_ladymleftmiss
+	            anim[RIGHTMISS]=spr_ladymrightmiss
 	            pause=spr_ladympause
 	        break;
 	        case 0: //normal
@@ -151,6 +151,16 @@ function scr_charset(argument0, argument1) {
 	with(obj_badguy) {
 	if obj_stats.joshmode=false {
 	switch(baddie){
+		case -7: //dan
+	        idle[0]=spr_danidle
+	        ayy=spr_danayy
+	        anim[LEFT]=spr_danleft
+	        anim[DOWN]=spr_dandown
+	        anim[UP]=spr_danup
+	        anim[RIGHT]=spr_danright
+	        pause=spr_danpause
+			bad_ayy_snd=snd_danayy
+	    break;
 	    case -6: //cromp
 	        idle[0]		=spr_crompidle1
 	        idle[1]		=spr_crompidle2
@@ -314,6 +324,43 @@ function scr_charset(argument0, argument1) {
 	        anim[UPMISS]	=spr_cdboyup3s
 	        anim[RIGHTMISS]	=spr_cdboyright3s
 	        pause			=spr_cdboypause3s
+	    break;
+		case 6: //gunk
+	        idle[0]=spr_gunkidle1
+	        idle[1]=spr_gunkidle2
+	        idle[2]=spr_gunkidle1
+	        idle[3]=spr_gunkidle2
+	        numidle=3
+	        ayy=spr_gunkayy
+	        anim[LEFT]=spr_gunkleft
+	        anim[DOWN]=spr_gunkdown
+	        anim[UP]=spr_gunkup
+	        anim[RIGHT]=spr_gunkright
+	        anim[LEFTMISS]=spr_gunkleft
+	        anim[DOWNMISS]=spr_gunkdown
+	        anim[UPMISS]=spr_gunkup
+	        anim[RIGHTMISS]=spr_gunkright
+	        pause=spr_gunkpause
+			bad_ayy_snd = snd_gunkayy
+	    break;
+	    case 7: //gunk PISSED OFF
+	        idle[0]=spr_gunkidlepiss
+	        ayy=spr_gunkayy
+	        anim[LEFT]=spr_gunkleftpiss
+	        anim[DOWN]=spr_gunkdownpiss
+	        anim[UP]=spr_gunkuppiss
+	        anim[RIGHT]=spr_gunkrightpiss
+	        anim[LEFTALT]=spr_gunkleftpissalt
+	        anim[DOWNALT]=spr_gunkdownpissalt
+	        anim[UPALT]=spr_gunkuppissalt
+	        anim[RIGHTALT]=spr_gunkrightpissalt
+	        anim[LEFTMISS]=spr_gunkleftpiss
+	        anim[DOWNMISS]=spr_gunkdownpiss
+	        anim[UPMISS]=spr_gunkuppiss
+	        anim[RIGHTMISS]=spr_gunkrightpiss
+        
+	        pause=spr_gunkpause
+			
 	    break;
 	    }
 	} else {

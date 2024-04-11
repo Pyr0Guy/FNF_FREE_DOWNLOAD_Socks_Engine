@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_unlockdan",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":3,
+  "conversionMode":0,
+  "duration":7.612494,
+  "name":"snd_unlockdan",
+  "parent":{
+    "name":"song unlocks",
+    "path":"folders/Sounds/soundeffects/song unlocks.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_unlockdan",
+  "type":0,
+  "volume":1.0,
+}

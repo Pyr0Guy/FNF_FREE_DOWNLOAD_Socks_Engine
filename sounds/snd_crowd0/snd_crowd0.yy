@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_crowd0",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":192,
+  "compression":3,
+  "conversionMode":0,
+  "duration":0.067755,
+  "name":"snd_crowd0",
+  "parent":{
+    "name":"crowd",
+    "path":"folders/Sounds/soundeffects/dialogsfx/crowd.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_crowd0",
+  "type":0,
+  "volume":1.0,
+}

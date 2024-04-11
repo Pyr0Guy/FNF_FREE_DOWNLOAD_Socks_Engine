@@ -5,11 +5,11 @@ else
 
 if menu_state == MENU_STATE.normal {
 //moving cursor
-    if keyboard_check_pressed(vk_up) or gamepad_button_check_pressed(0,gp_padu){
+    if scr_multiCheckButtonPressed(vk_up,gp_padu){
 		cout = 0;
         sel--
     }
-    if keyboard_check_pressed(vk_down) or gamepad_button_check_pressed(0,gp_padd) {
+    if scr_multiCheckButtonPressed(vk_down,gp_padd) {
 		cout = 0;
         sel++
     }
@@ -32,8 +32,8 @@ if menu_state == MENU_STATE.normal {
     }
     options[3]=(string("NOTE TYPE: ")+string(burger))
     options[4]="CHANGE SKIN"
-	options[5]="IN-GAME FPS " + string(obj_stats.in_game_fps)
-	options[6]="FULLSCREEN"
+	//options[5]="IN-GAME FPS " + string(obj_stats.in_game_fps)
+	options[5]="FULLSCREEN"
 	
 	if(obj_stats.funnyNotePos)
 		var noteP = "funny"
@@ -41,9 +41,9 @@ if menu_state == MENU_STATE.normal {
 		var noteP = "normal"
 	
 	if(obj_stats.fullscreen)
-		options[7]="NOTE POSITION: " + string(noteP)
+		options[6]="NOTE POSITION: " + string(noteP)
 //select something
-    if (keyboard_check_pressed(ord("Z")) or keyboard_check_pressed(vk_enter) or gamepad_button_check_pressed(0,gp_face1)) {
+    if scr_multiCheckButtonPressed(ord("Z"),vk_enter,gp_face1){
         switch(sel) {
         case 0: //downscroll
             with(obj_stats) {
@@ -69,29 +69,22 @@ if menu_state == MENU_STATE.normal {
             wait=5
             menu_state = MENU_STATE.changing_skin;
         break;
-		case 6:
+		case 5:
 			wait=5
             obj_stats.fullscreen = !obj_stats.fullscreen
         break;
-		case 7:
+		case 6:
 			wait=5
 			obj_stats.funnyNotePos = !obj_stats.funnyNotePos
 		break;
         }   
     }
 	
-	if(sel == 5){
-		if(keyboard_check_pressed(vk_left) && obj_stats.in_game_fps > 60)
-			obj_stats.in_game_fps -= 10;
-		
-		if(keyboard_check_pressed(vk_right) && obj_stats.in_game_fps < 240)
-			obj_stats.in_game_fps += 10;
-	}
-	
 	if(alarm[0] < 0)
 		alarm[0] = 1
 //now get out
-    if (keyboard_check_pressed(ord("X")) or keyboard_check_pressed(vk_shift) or keyboard_check_pressed(vk_escape) or gamepad_button_check_pressed(0,gp_face2)) {
+    if scr_multiCheckButtonPressed(ord("X"),vk_shift, vk_escape,gp_face2)
+	{
         instance_create(0,0,obj_fadeout)
         obj_fadeout.roomgo=rm_stuffselect
     }
@@ -131,12 +124,9 @@ switch(sel)
 		description_temp = "Change Yourself"
 	break;
 	case 5:
-		description_temp = "More fps - more fun to play"
-	break;
-	case 6:
 		description_temp = "Make your Game BIG"
 	break;
-	case 7:
+	case 6:
 		description_temp = "THIS IS SO STUPIT"
 	break;
 }

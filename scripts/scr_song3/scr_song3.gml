@@ -1,24 +1,24 @@
 //Girl Next Door
 
 function scr_song3(){
-	if obj_song.paused=false {
-            obj_song.m+=1
-            obj_song.mm+=0.25
-            if obj_song.m>=344 {
-                obj_song.m=0
+	if paused=false {
+            m+=1
+            mm+=0.25
+            if m>=344 {
+                m=0
             }
-            if obj_song.mm>=238 {
-                obj_song.mm=0
+            if mm>=238 {
+                mm=0
             }
-            if obj_song.mmm>2392 {
-                obj_song.mmm=1196
+            if mmm>2392 {
+                mmm=1196
             }
-            if obj_song.event>=4 {
-                obj_song.mmm+=4
+            if event>=4 {
+                mmm+=4
             }
         }
         draw_sprite_ext(spr_whitepixel,0,0,0,room_width,room_height,0,make_color_rgb(192,192,192),1)
-        switch(obj_song.event) {
+        switch(event) {
         case 4: //darkness intro
             //background
             with(obj_backgroundp1) {
@@ -45,15 +45,14 @@ function scr_song3(){
             //effects
             with(obj_player) {
                 image_alpha=0
-                scr_skinswapdude(c_white)
+                scr_shadercheck(shader_colorswap,c_white)
                     draw_sprite(sprite_index,image_index,x,y)
                 shader_reset();
-                scr_skinswapdude(c_black)
-                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_black,obj_song.mmm*0.05)
-                shader_reset();
-                scr_highlight(make_color_rgb(32,30,40),c_white)
+                draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_black,obj_song.mmm*0.05)
+                if scr_shadercheck(sh_highlight,make_color_rgb(32,30,40),c_white) {
                     draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,obj_song.mmm*0.05)
-                shader_reset();
+                    shader_reset();
+                }
             }
             with(obj_badguy) {
                 image_alpha=0
@@ -101,24 +100,23 @@ function scr_song3(){
             //effects
             with(obj_player) {
                 image_alpha=0
-                scr_skinswapdude(c_white)
+                if scr_shadercheck(shader_colorswap,c_white) {
                     draw_sprite(sprite_index,image_index,x,y)
-                shader_reset();
-                scr_skinswapdude(c_black)
-                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,obj_song.mmm*0.05)
-                shader_reset();
-                scr_skinswapdude(funcolor)
-                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,0.20)
-                shader_reset();
-                scr_skinswapdude(c_black)
-                    draw_sprite_ext(sprite_index,image_index,x+4,y,1,1,0,c_white,0.40)
-                shader_reset();
-                scr_skinswapdude(c_black)
-                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,obj_song.mmmm)
-                shader_reset();
-                scr_highlight(make_color_rgb(32,30,40),c_white)
-                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,obj_song.mmm*0.05)
-                shader_reset();
+                    shader_reset();
+                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_black,obj_song.mmm*0.05)
+                    scr_skinswapdude(funcolor)
+                        draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,0.20)
+                    shader_reset();
+                    draw_sprite_ext(sprite_index,image_index,x+4,y,1,1,0,c_black,0.40+obj_song.mmmm)
+                    scr_highlight(make_color_rgb(32,30,40),c_white)
+                        draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,obj_song.mmm*0.05)
+                    shader_reset();
+                } else {
+                    draw_sprite(sprite_index,image_index,x,y)
+                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_black,obj_song.mmm*0.05)
+                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,funcolor,0.20)
+                    draw_sprite_ext(sprite_index,image_index,x+4,y,1,1,0,c_black,0.40+obj_song.mmmm)
+                }
             }
             with(obj_badguy) {
                 image_alpha=0
@@ -173,24 +171,23 @@ function scr_song3(){
             //effects
             with(obj_player) {
                 image_alpha=0
-                scr_skinswapdude(c_white)
+                if scr_shadercheck(shader_colorswap,c_white) {
                     draw_sprite(sprite_index,image_index,x,y)
-                shader_reset();
-                scr_skinswapdude(c_black)
-                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,obj_song.mmm*0.05)
-                shader_reset();
-                scr_skinswapdude(funcolor)
-                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,0.24)
-                shader_reset();
-                scr_skinswapdude(c_black)
-                    draw_sprite_ext(sprite_index,image_index,x+4,y,1,1,0,c_white,0.4)
-                shader_reset();
-                scr_skinswapdude(c_black)
-                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,obj_song.mmmm)
-                shader_reset();
-                scr_highlight(make_color_rgb(32,30,40),c_white)
-                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,obj_song.mmm*0.05)
-                shader_reset();
+                    shader_reset();
+                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_black,obj_song.mmm*0.05)
+                    scr_skinswapdude(funcolor)
+                        draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,0.20)
+                    shader_reset();
+                    draw_sprite_ext(sprite_index,image_index,x+4,y,1,1,0,c_black,0.40+obj_song.mmmm)
+                    scr_highlight(make_color_rgb(32,30,40),c_white)
+                        draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,obj_song.mmm*0.05)
+                    shader_reset();
+                } else {
+                    draw_sprite(sprite_index,image_index,x,y)
+                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_black,obj_song.mmm*0.05)
+                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,funcolor,0.20)
+                    draw_sprite_ext(sprite_index,image_index,x+4,y,1,1,0,c_black,0.40+obj_song.mmmm)
+                }
             }
             with(obj_badguy) {
                 image_alpha=0
@@ -241,24 +238,23 @@ function scr_song3(){
             //effects
             with(obj_player) {
                 image_alpha=0
-                scr_skinswapdude(c_white)
+                if scr_shadercheck(shader_colorswap,c_white) {
                     draw_sprite(sprite_index,image_index,x,y)
-                shader_reset();
-                scr_skinswapdude(c_black)
-                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,obj_song.mmm*0.05)
-                shader_reset();
-                scr_skinswapdude(funcolor)
-                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,0.24)
-                shader_reset();
-                scr_skinswapdude(c_black)
-                    draw_sprite_ext(sprite_index,image_index,x+4,y,1,1,0,c_white,0.4)
-                shader_reset();
-                scr_skinswapdude(c_black)
-                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,obj_song.mmmm)
-                shader_reset();
-                scr_highlight(make_color_rgb(32,30,40),c_white)
-                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,obj_song.mmm*0.05)
-                shader_reset();
+                    shader_reset();
+                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_black,obj_song.mmm*0.05)
+                    scr_skinswapdude(funcolor)
+                        draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,0.20)
+                    shader_reset();
+                    draw_sprite_ext(sprite_index,image_index,x+4,y,1,1,0,c_black,0.40+obj_song.mmmm)
+                    scr_highlight(make_color_rgb(32,30,40),c_white)
+                        draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,obj_song.mmm*0.05)
+                    shader_reset();
+                } else {
+                    draw_sprite(sprite_index,image_index,x,y)
+                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_black,obj_song.mmm*0.05)
+                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,funcolor,0.20)
+                    draw_sprite_ext(sprite_index,image_index,x+4,y,1,1,0,c_black,0.40+obj_song.mmmm)
+                }
             }
             with(obj_badguy) {
                 image_alpha=0
@@ -307,13 +303,13 @@ function scr_song3(){
         break;
         }
         //DANCE TIME!!
-        if obj_song.event=2 {
+        if event=2 {
             var poop = sin(current_time/200)*2
             draw_sprite_ext(spr_dancebreak,poop,obj_camera.x,obj_camera.y-100,1,1,0,c_black,1)
             draw_sprite(spr_dancebreak,0,obj_camera.x,(obj_camera.y-100)+poop)
         }
         //CYAN
-        if obj_song.event=8 or obj_song.event=13 or obj_song.event>=14{
+        if event=8 or event=13 or event>=14{
             //tint
             var cyan=make_colour_rgb(55,223,232)
             //background
@@ -348,12 +344,16 @@ function scr_song3(){
             }
             with(obj_player) {
                 image_alpha=0
-                scr_skinswapdude(c_white)
+                if scr_shadercheck(shader_colorswap,c_white) {
                     draw_sprite(sprite_index,image_index,x,y)
-                shader_reset();
-                scr_skinswapdude(cyan)
-                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,0.25)
-                shader_reset();
+                    shader_reset();
+                    scr_skinswapdude(cyan)
+                        draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,c_white,0.25)
+                    shader_reset();
+                } else {
+                    draw_sprite(sprite_index,image_index,x,y)
+                    draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,cyan,0.25)
+                }
             }
             with(obj_badguy) {
                 image_alpha=0

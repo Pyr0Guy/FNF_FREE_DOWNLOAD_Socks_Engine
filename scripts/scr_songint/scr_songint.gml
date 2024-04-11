@@ -34,6 +34,26 @@ function scr_songint(argument0) {
 	        obj_camera.x=700
 	        obj_camera.y=500
 	    break;
+		case -4: //cinemassacre
+	    song=mus_cinemassacre
+	    ntsc=true
+	    //background
+	    obj_backgroundp1.sprite_index=spr_danbg
+	    //characters
+	    scr_charset(0,-7)
+	    scr_charpos(200,297,460,297,-1,-1)
+	    //camera
+	    with(obj_camera) {
+	        xgo[playerc]=obj_player.x-50
+	        xgo[badguyc]=obj_badguy.x+50
+	        xgo[mainc]=324
+	        x=xgo[mainc]
+	    }
+	    //pause music variables
+	    pausesong=-1
+	    pausevol=0
+	    pausetime=0
+	    break;
 	    case -3: //break it down
 	        song=mus_breakitdown
 	        weeknd3=true
@@ -239,8 +259,6 @@ function scr_songint(argument0) {
 	                obj_lady.sprite[k]=spr_ladyidlerightw2
 	            }
 	        }
-			
-			trace(obj_lady.sprite)
 	    break;
 	    case 4: //gamejack
 	        song=mus_w2s2
@@ -265,20 +283,17 @@ function scr_songint(argument0) {
 	        obj_camera.big[ALL]=400
 	    break;
 	    case 5: //twinkle
+	        song=mus_w3s1
 	        weeknd3=true
 	        weeknd3m=0.5
 	        obj_song.mmm=0.6
 	        obj_song.mmmm=0.6
 	        //background
 	        obj_backgroundp1.image_alpha=0
-	        //weeknd3=true
-	        song=mus_w3s1
-	        obj_badguy.x=185
-	        obj_player.x=400
-	        obj_lady.x=276
-	        obj_lady.y=310
-	        obj_lady.image_index=spr_speakeroff
+	        //characters
 	        scr_charset(0,4)
+	        scr_charpos(185,bby,400,pby,276,310)
+	        obj_lady.image_index=spr_speakeroff
 	        //still didn't make that script
 	        var k;
 	        for (k=0;k<8;k++) {
@@ -290,69 +305,153 @@ function scr_songint(argument0) {
 	        } else {
 	            var pluscamera=0;
 	        }
-	        obj_camera.xgo[DUDE]=358
-	        obj_camera.ygo[DUDE]=200+pluscamera
-	        obj_camera.big[DUDE]=400
-	        obj_camera.xgo[BAD]=210//176
-	        obj_camera.ygo[BAD]=200+pluscamera
-	        obj_camera.big[BAD]=400
-	        obj_camera.xgo[ALL]=280
-	        obj_camera.ygo[ALL]=200+pluscamera
-	        obj_camera.big[ALL]=400
-	        //set camera pos
-	        obj_camera.x=280
-	        obj_camera.y=200
+	        //camera
+	        with(obj_camera) {
+	            xgo[playerc]=358
+	            ygo[playerc]=200+pluscamera
+	            big[playerc]=400
+	            xgo[badguyc]=210//176
+	            ygo[badguyc]=200+pluscamera
+	            big[badguyc]=400
+	            xgo[mainc]=280
+	            ygo[mainc]=200+pluscamera
+	            big[mainc]=400
+	            //set camera pos
+	            x=280
+	            y=200
+	        }
+	        //dude and buddy anime segment
+	        dudeasurf=-1
+	        buddyasurf=-1
 	        //tv screen "id"s
 	        var tv;
 	        for(tv=0;tv<=15;tv++) {
 	            screen[tv,0]="dark"
-	            screen[tv,1]=0
+	            screen[tv,1]=surface_create(45,45)
 	        }
+	        //dingle
+	        dingle=surface_create(45,45)
 	    break;
 	    case 6: //"tsunami"
 	        song=mus_w3s2
-	        weeknd3=true
-	        weeknd3m=0
-	        obj_song.mm="nothing"
-	        scr_charset(0,3) //5
-	        obj_badguy.x=185
-	        obj_player.x=425
-	        with(instance_create(obj_player.x-70,obj_player.y-6,obj_nermal)) {
-	            image_xscale=1.125 //I drew buddy too small so this is my admititly lazy fix for that :P
-	            idle[0]=spr_buddyidlet
-	            anim[0]=spr_buddyleftt
-	            anim[1]=spr_buddydownt
-	            anim[2]=spr_buddyupt
-	            anim[3]=spr_buddyrightt
-	            pause=spr_buddypauset
+			weeknd3=true
+			weeknd3m=0
+			obj_song.mm="nothing"
+			//characters
+			scr_charset(0,3) //5
+			scr_charpos(185,bby,425,pby,276,310)
+			with(obj_badguy) { cdboy=surface_create(200,200); }
+			instance_create(obj_player.x-70,obj_player.y-6,obj_nermal)
+			with(obj_nermal) {
+			    image_xscale=1.125 //I drew buddy too small so this is my admititly lazy fix for that :P
+			    idle[playerc]=spr_buddyidlet
+			    anim[playerc]=spr_buddyleftt
+			    anim[badguyc]=spr_buddydownt
+			    anim[mainc]=spr_buddyupt
+			    anim[3]=spr_buddyrightt
+			    pause=spr_buddypauset
+			}
+			obj_lady.image_index=spr_speakeroff        
+			//camera
+			if obj_stats.downscroll=true {
+			    var pluscamera=35;
+			} else {
+			    var pluscamera=0;
+			}
+			//camera
+			with(obj_camera) {
+			    xgo[playerc]=385
+			    ygo[playerc]=225//+pluscamera
+			    big[playerc]=200
+			    xgo[badguyc]=180
+			    ygo[badguyc]=235//+pluscamera
+			    big[badguyc]=200
+			    xgo[mainc]=280
+			    ygo[mainc]=200+pluscamera
+			    big[mainc]=400
+			    //set camera pos
+			    x=280
+			    y=200
+			}
+			screen="colorlight"
+			screend=surface_create(45,45)
+			
+	    break;
+		case 7: //satellite
+			song=mus_w4s1
+			obj_song.event=3
+			//background
+			obj_backgroundp1.sprite_index=spr_gunkstage1
+			//characters
+			scr_charset(0,6)
+			scr_charpos(340,306,570,301,451,292)
+			obj_player.image_alpha=0
+			obj_badguy.image_alpha=0
+			obj_lady.image_alpha=0
+			/*
+			for (k=0;k<8;k++) {
+			    if k%2=0 or k=0 {
+			        obj_lady.sprite[k]=spr_ladycidleleft
+			    } else {
+			        obj_lady.sprite[k]=spr_ladycidleright
+			    }
+			}
+			*/
+			//camera
+			with(obj_camera) {
+			    xgo[playerc]=605 //placeholder
+			    ygo[playerc]=240
+			    big[playerc]=400
+			    xgo[badguyc]=298 //placeholder
+			    ygo[badguyc]=200
+			    big[badguyc]=400
+			    xgo[mainc]=451
+			    ygo[mainc]=200
+			    big[mainc]=400
+			    x=xgo[place]
+			    y=ygo[place]
+			    image_xscale=big[place]
+			}
+			//scr_screenborder(40,0.5);
+	    break;
+	    case 8: //starfire
+	        song=mus_w4s2
+	        hideui=true
+			offHud = true;
+	        mmmmmmm=9999
+	        //background
+	        obj_backgroundp1.sprite_index=spr_gunkstage1
+	        //surface variables
+	        gunkscreen=-1
+	        dudescreen=-1
+	        gunkfreeze=-1
+	        dudefreeze=-1
+	        //characters
+	        scr_charset(0,7)
+	        scr_charpos(308,306,615,311,451,292)
+			/*
+	        //STILL HAVEN'T MADE THAT "SET LADY SPRITES" SCRIPT
+	        var k;
+	        for (k=0;k<8;k++) {
+	            obj_lady.sprite[k]=spr_ladysad
 	        }
-	        obj_lady.x=276
-	        obj_lady.y=310
-	        obj_lady.image_index=spr_speakeroff        
+			*/
 	        //camera
-	        if obj_stats.downscroll=true {
-	            var pluscamera=35;
-	        } else {
-	            var pluscamera=0;
+	        with(obj_camera) {
+	            xgo[playerc]=605
+	            ygo[playerc]=240
+	            big[playerc]=400
+	            xgo[badguyc]=obj_badguy.x
+	            ygo[badguyc]=200
+	            big[badguyc]=400
+	            xgo[mainc]=451
+	            ygo[mainc]=200
+	            big[mainc]=400
+	            x=xgo[place]
+	            y=ygo[place]
+	            image_xscale=big[place]
 	        }
-	        obj_camera.xgo[DUDE]=385
-	        obj_camera.ygo[DUDE]=225//+pluscamera
-	        obj_camera.big[DUDE]=200
-	        obj_camera.xgo[BAD]=180
-	        obj_camera.ygo[BAD]=235//+pluscamera
-	        obj_camera.big[BAD]=200
-	        obj_camera.xgo[ALL]=280
-	        obj_camera.ygo[ALL]=200+pluscamera
-	        obj_camera.big[ALL]=400
-	        //set camera pos
-	        obj_camera.x=280
-	        obj_camera.y=200
-	        //tv screen "id"s
-	        var tv;
-	        for(tv=0;tv<=15;tv++) {
-	            screen[tv,0]="colorlight"
-	            screen[tv,1]=0
-	        }
+	        //scr_screenborder(60,0.85);
 	    break;
 	    }
 	} else {
@@ -394,84 +493,59 @@ function scr_songint(argument0) {
 		obj_song.notes=file_text_read_real(file)
 		file_text_readln(file)
 		//load notes
-		var b;
-		var bb;
-		var songlong = round(((audio_sound_length(obj_song.song) / 60)*obj_song.bpm*4));
-		var dingus;
-		var spacex; //how far apart are the notes: left and right
-		var spacey; //how far apart are the notes: up and down 
-		var apartb; //how far on the screen the badguys notes are
-		var apartg; //how far on the screen your notes are
-		//note spacing
-		if notes>4 {
-		    spacex=29
-		    spacey=29
-		    spaceyd=352
-		    apartg=234
-		    apartb=32
-		} else {
-		    spacex=44
-		    spacey=48
-		    spaceyd=352
-		    apartg=234
-		    apartb=32
-		}
-	
-		var funnySpace;
-		if(obj_stats.funnyNotePos)
-			funnySpace = 165
-		else
-			funnySpace = 0
-		//create notes
-		for (bb=0; bb<obj_song.notes*2; bb++) {
-		    for (b=0; b<songlong; b++) {
-		        //event set
-		        if b=0 {
-		            var event=0
-		        }
-		        note[bb,b] = file_text_read_real(file)
-		        file_text_readln(file)
-		        //create notes
-		        if obj_stats.downscroll=false {
-		            if note[bb,b]>0 {
-		                if bb<obj_song.notes {
-		                    dingus = instance_create(apartb+(bb*spacex) - funnySpace,48+(b*(spacey*obj_song.notespeed)),obj_note)
-		                    moron = instance_create(apartb+(bb*spacex) - funnySpace,48,obj_uinotes)
-		                } else {
-		                    dingus = instance_create(apartg+((bb-obj_song.notes)*spacex) + funnySpace,48+(b*(spacey*obj_song.notespeed)),obj_note)
-		                    moron = instance_create(apartg+((bb-obj_song.notes)*spacex)  + funnySpace,48,obj_uinotes)
-		                }
-		                dingus.note = bb
-		                dingus.type = note[bb,b]
-		                moron.note = bb
-		                //event notes
-		                if note[bb,b]=10 {
-		                    dingus.event=event
-		                    event++
-		                }
-		            }
-		        } else {
-		            if note[bb,b]>0 {
-		                if bb<obj_song.notes {
-		                    dingus = instance_create(apartb+(bb*spacex)- funnySpace,spaceyd+(b*(-spacey*obj_song.notespeed)),obj_note)
-		                    moron = instance_create(apartb+(bb*spacex) - funnySpace,spaceyd,obj_uinotes)
-		                } else {
-		                    dingus = instance_create(apartg+((bb-obj_song.notes)*spacex) + funnySpace,352+(b*(-spacey*obj_song.notespeed)),obj_note)
-		                    moron = instance_create(apartg+((bb-obj_song.notes)*spacex)  + funnySpace,352,obj_uinotes)
-		                }
-		                dingus.note = bb
-		                dingus.type = note[bb,b]
-		                moron.note = bb
-		                //event notes
-		                if note[bb,b]=10 {
-		                    dingus.event=event
-		                    event++
-		                }
-		            }
-		        }
-		    }
-		}
-		file_text_close(file)
+		var b; //down
+	var bb; //across
+	var songlong=round(((audio_sound_length(obj_song.song)/60)*obj_song.bpm*4));
+	var dosc=((obj_stats.downscroll)*-2)+1 //vertical multiplier
+	var nosp=obj_song.notespeed //notespeed with no identifier
+	//note starting position
+	if dosc!=-1 {
+	    starty=48
+	} else {
+	    starty=352
+	}
+	obj_song.y=starty
+	//load notes
+	for (bb=0;bb<8;bb++) {
+	    //x position
+	    if bb<4 {
+	        var myx=32+(44*bb)
+	    } else {
+	        var myx=234+(44*(bb-4))
+	    }
+	    //ui notes
+	    var sucker=instance_create(myx,starty,obj_uinotes);
+	    sucker.note=bb;
+	    //note... notes
+	    for (b=0; b<songlong; b++) {
+	        if b=0 {
+	            var event=0
+	        }
+	        note[bb,b]=file_text_read_real(file)
+	        file_text_readln(file)
+	        if note[bb,b]!=0 {
+	            //create note
+	            var dingus=instance_create(myx,starty+(b*48*nosp*dosc),obj_note); 
+	            dingus.note=bb
+	            dingus.type=note[bb,b]
+	            //position holding
+	            dingus.xx=dingus.x
+	            dingus.yy=dingus.y
+	            //solid checking
+	            if note[bb,b]=4 or note[bb,b]=5 or note[bb,b]=6 or note[bb,b]=7 or note[bb,b]=10 or note[bb,b]=11 {
+	                dingus.solid=false
+	            } else {
+	                dingus.solid=true
+	            }
+	            //event note
+	            if note[bb,b]=10 {
+	                dingus.event=event
+	                event++
+	            }
+	        }
+	    }
+	}
+	file_text_close(file)
 	}
 	/*
 	else
